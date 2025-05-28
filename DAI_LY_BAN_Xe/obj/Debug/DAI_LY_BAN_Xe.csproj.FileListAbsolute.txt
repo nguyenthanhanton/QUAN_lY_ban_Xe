@@ -11,3 +11,16 @@ D:\duanc#\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.pdb
 D:\duanc#\DAI_LY_BAN_Xe\bin\Debug\Bunifu_UI_v1.52.dll
 D:\duanc#\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_B.685F8EF7.Up2Date
 D:\duanc#\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.CuaHang.resources
+D:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\bin\Debug\DAI_LY_BAN_Xe.exe.config
+D:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\bin\Debug\DAI_LY_BAN_Xe.exe
+D:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\bin\Debug\DAI_LY_BAN_Xe.pdb
+D:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\bin\Debug\Bunifu_UI_v1.52.dll
+D:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.csproj.AssemblyReference.cache
+D:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.CuaHang.resources
+D:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.login_main.resources
+D:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.Properties.Resources.resources
+D:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.csproj.GenerateResource.cache
+D:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.csproj.CoreCompileInputs.cache
+D:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_B.685F8EF7.Up2Date
+D:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.exe
+D:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.pdb
