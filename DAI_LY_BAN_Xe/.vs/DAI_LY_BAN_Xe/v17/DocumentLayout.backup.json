@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\",
+  "WorkspaceRootPath": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|d:\\quan_ly_ban_xe\\dai_ly_ban_xe\\cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\3\\quan_ly_ban_xe\\dai_ly_ban_xe\\cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,34 +26,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs",
+              "DocumentMoniker": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAkwCgAAAAZAAAAAAAAAA==",
+              "ToolTip": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs*",
+              "RelativeToolTip": "Form1.cs*",
+              "ViewState": "AgIAABsAAAAAAAAAAAAwwDAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T01:43:12.763Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CuaHang.cs",
-              "DocumentMoniker": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
-              "RelativeDocumentMoniker": "CuaHang.cs",
-              "ToolTip": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs*",
-              "RelativeToolTip": "CuaHang.cs*",
-              "ViewState": "AgIAACMAAAAAAAAAAAAUwDQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T01:56:04.972Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Bookmark",
@@ -61,16 +52,29 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CuaHang.cs [Design]",
-              "DocumentMoniker": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
+              "DocumentIndex": 3,
+              "Title": "CuaHang.cs",
+              "DocumentMoniker": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
               "RelativeDocumentMoniker": "CuaHang.cs",
-              "ToolTip": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs [Design]*",
-              "RelativeToolTip": "CuaHang.cs [Design]*",
+              "ToolTip": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
+              "RelativeToolTip": "CuaHang.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAUwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T01:56:04.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CuaHang.cs [Design]",
+              "DocumentMoniker": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
+              "RelativeDocumentMoniker": "CuaHang.cs",
+              "ToolTip": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs [Design]",
+              "RelativeToolTip": "CuaHang.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T01:53:42.939Z",
               "EditorCaption": " [Design]"
@@ -79,10 +83,10 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs",
+              "DocumentMoniker": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "ToolTip": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs [Design]*",
+              "RelativeToolTip": "Form1.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T01:33:07.711Z",
               "EditorCaption": " [Design]"

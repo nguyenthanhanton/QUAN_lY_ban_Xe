@@ -40,5 +40,18 @@ namespace DAI_LY_BAN_Xe
             form2 = new CuaHang();
             form2.Show();
         }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Thoát chương trình hoặc thực hiện hành động thoát
+                Application.Exit();
+            }
+
+
+        }
     }
 }
