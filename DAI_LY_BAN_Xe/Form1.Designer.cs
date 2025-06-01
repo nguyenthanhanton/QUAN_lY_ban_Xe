@@ -51,9 +51,10 @@
             this.panel1.Controls.Add(this.txt_username);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 268);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 240);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(409, 375);
+            this.panel1.Size = new System.Drawing.Size(433, 393);
             this.panel1.TabIndex = 1;
             // 
             // c_showpass

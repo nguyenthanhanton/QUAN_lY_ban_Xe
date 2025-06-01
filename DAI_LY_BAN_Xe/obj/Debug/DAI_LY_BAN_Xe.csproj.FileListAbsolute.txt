@@ -36,3 +36,15 @@ F:\3\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.csproj.CoreCompileInpu
 F:\3\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_B.685F8EF7.Up2Date
 F:\3\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.exe
 F:\3\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.pdb
+F:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\bin\Debug\DAI_LY_BAN_Xe.exe.config
+F:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\bin\Debug\DAI_LY_BAN_Xe.exe
+F:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\bin\Debug\DAI_LY_BAN_Xe.pdb
+F:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.csproj.AssemblyReference.cache
+F:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.CuaHang.resources
+F:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.login_main.resources
+F:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.Properties.Resources.resources
+F:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.csproj.GenerateResource.cache
+F:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.csproj.CoreCompileInputs.cache
+F:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_B.685F8EF7.Up2Date
+F:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.exe
+F:\QUAN_lY_ban_Xe\DAI_LY_BAN_Xe\obj\Debug\DAI_LY_BAN_Xe.pdb

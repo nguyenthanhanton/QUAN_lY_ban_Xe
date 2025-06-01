@@ -10,16 +10,19 @@ using System.Windows.Forms;
 
 namespace DAI_LY_BAN_Xe
 {
+    
     public partial class login_main : Form
     {
+        SQLcode SQLcode= new SQLcode();
         public login_main()
         {
             InitializeComponent();
+            
         }
 
         private void login_main_Load(object sender, EventArgs e)
         {
-
+            SQLcode.taoketnoi();
         }
 
         private void c_showpass_CheckedChanged(object sender, EventArgs e)
@@ -36,9 +39,32 @@ namespace DAI_LY_BAN_Xe
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            CuaHang form2;
-            form2 = new CuaHang();
-            form2.Show();
+
+            string taikhoan = txt_username.Text.Trim();
+            string matkhau = txt_password.Text.Trim();
+            int trangthai = SQLcode.kttaikhoan(taikhoan, matkhau);
+            if (trangthai == 0)
+            {
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (trangthai == 1)
+            {   this.Visible = false; // Ẩn form đăng nhập
+
+                CuaHang adminForm = new CuaHang();
+                adminForm.ShowDialog();
+                SQLcode.dongketnoi(); // Đóng kết nối sau khi sử dụng
+
+            }
+            else if (trangthai == 2)
+            {
+                this.Visible = false; // Ẩn form đăng nhập
+                CuaHang staffForm = new CuaHang();
+                staffForm.ShowDialog();
+                SQLcode.dongketnoi(); // Đóng kết nối sau khi sử dụng
+
+            }
+            this.Visible = true; // Hiển thị lại form đăng nhập sau khi đóng form CuaHang
+            SQLcode.taoketnoi(); // Đóng kết nối sau khi sử dụng
         }
 
         private void btn_exit_Click(object sender, EventArgs e)

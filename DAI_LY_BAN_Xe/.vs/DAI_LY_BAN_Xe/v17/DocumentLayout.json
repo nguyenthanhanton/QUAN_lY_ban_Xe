@@ -1,21 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\",
+  "WorkspaceRootPath": "F:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\quan_ly_ban_xe\\dai_ly_ban_xe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\3\\quan_ly_ban_xe\\dai_ly_ban_xe\\cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\quan_ly_ban_xe\\dai_ly_ban_xe\\sqlcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:sqlcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -32,19 +36,29 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs",
+              "DocumentMoniker": "F:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs",
+              "ToolTip": "F:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAwwDcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAkwA8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T01:43:12.763Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CuaHang.cs",
+              "DocumentMoniker": "F:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
+              "RelativeDocumentMoniker": "CuaHang.cs",
+              "ToolTip": "F:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
+              "RelativeToolTip": "CuaHang.cs",
+              "ViewState": "AgIAANYAAAAAAAAAAAAAAO0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T01:56:04.972Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -52,28 +66,32 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CuaHang.cs",
-              "DocumentMoniker": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
-              "RelativeDocumentMoniker": "CuaHang.cs",
-              "ToolTip": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
-              "RelativeToolTip": "CuaHang.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAUwDQAAAAAAAAAAAAAAA==",
+              "Title": "SQLcode.cs",
+              "DocumentMoniker": "F:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\SQLcode.cs",
+              "RelativeDocumentMoniker": "SQLcode.cs",
+              "ToolTip": "F:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\SQLcode.cs",
+              "RelativeToolTip": "SQLcode.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAQwH4AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T01:56:04.972Z",
+              "WhenOpened": "2025-06-01T01:56:37.021Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "CuaHang.cs [Design]",
-              "DocumentMoniker": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
+              "DocumentMoniker": "F:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
               "RelativeDocumentMoniker": "CuaHang.cs",
-              "ToolTip": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs [Design]",
+              "ToolTip": "F:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs [Design]",
               "RelativeToolTip": "CuaHang.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T01:53:42.939Z",
@@ -83,9 +101,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs",
+              "DocumentMoniker": "F:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "F:\\3\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs [Design]",
+              "ToolTip": "F:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T01:33:07.711Z",
