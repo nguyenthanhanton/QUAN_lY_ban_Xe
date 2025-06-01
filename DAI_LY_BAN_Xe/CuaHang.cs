@@ -33,8 +33,8 @@ namespace DAI_LY_BAN_Xe
         datag_nhacc.ScrollBars = ScrollBars.Vertical;
         datag_nhacc.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 
-        int totalHeight = datag_nhacc.RowCount * datag_nhacc.RowTemplate.Height;
-        datag_nhacc.Height = Math.Min(totalHeight, 400);
+        int totalHeight = datag_nhacc.RowCount * datag_nhacc.RowTemplate.Height + datag_nhacc.ColumnHeadersHeight;
+        datag_nhacc.Height = Math.Min(totalHeight, 500);
     }
     else
     {
@@ -248,6 +248,17 @@ namespace DAI_LY_BAN_Xe
             else
             {
                 datag_nhacc.DataSource = dt;
+                datag_nhacc.DataSource = dt;
+                datag_nhacc.ReadOnly = true;
+                datag_nhacc.AllowUserToAddRows = false;
+                datag_nhacc.AllowUserToDeleteRows = false;
+                datag_nhacc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                datag_nhacc.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCells);
+                datag_nhacc.ScrollBars = ScrollBars.Vertical;
+                datag_nhacc.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+                int totalHeight = datag_nhacc.RowCount * datag_nhacc.RowTemplate.Height +datag_nhacc.ColumnHeadersHeight;
+                datag_nhacc.Height = Math.Min(totalHeight, 500);
             }
         }
 

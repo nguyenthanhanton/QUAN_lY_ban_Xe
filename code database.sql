@@ -160,3 +160,14 @@ BEGIN
         SDTNCC = COALESCE(@sdtncc, SDTNCC)
     WHERE MANCC = @mancc;
 END;
+
+CREATE PROCEDURE timkiemncc
+    @mancc VARCHAR(10) = NULL,
+    @tenncc NVARCHAR(50) = NULL
+AS
+BEGIN
+    SELECT MANCC N'Mã Nhà cung cấp', TENNCC N'Họ tên', DIACHI N'Địa chỉ',SDTNCC N'Số điện thoại' FROM NHACUNGCAP
+    WHERE
+        (@mancc IS NULL OR MANCC LIKE '%' + @mancc + '%') AND
+        (@tenncc IS NULL OR TENNCC LIKE N'%' + @tenncc + '%')
+END
