@@ -19,28 +19,23 @@ namespace DAI_LY_BAN_Xe
             InitializeComponent();
         }
 
-        private void loadncc()
-{
-    DataTable dt = SQLcode.laydanhsachncc();
-    if (dt != null)
-    {
-        datag_nhacc.DataSource = dt;
-        datag_nhacc.ReadOnly = true;
-        datag_nhacc.AllowUserToAddRows = false;
-        datag_nhacc.AllowUserToDeleteRows = false;
-        datag_nhacc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        datag_nhacc.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCells);
-        datag_nhacc.ScrollBars = ScrollBars.Vertical;
-        datag_nhacc.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+ 
+        private void load(DataGridView dgv, DataTable dt)
+        {                       
+            dgv.DataSource = dt;
+            dgv.ReadOnly = true;
+            dgv.AllowUserToAddRows = false;
+            dgv.AllowUserToDeleteRows = false;
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCells);
+            dgv.ScrollBars = ScrollBars.Vertical;
+            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 
-        int totalHeight = datag_nhacc.RowCount * datag_nhacc.RowTemplate.Height + datag_nhacc.ColumnHeadersHeight;
-        datag_nhacc.Height = Math.Min(totalHeight, 500);
-    }
-    else
-    {
-        MessageBox.Show("Không thể tải danh sách nhà cung cấp!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-    }
-}
+                int totalHeight = dgv.RowCount * dgv.RowTemplate.Height + dgv.ColumnHeadersHeight;
+            dgv.Height = Math.Min(totalHeight, 500);
+         
+        }
+
 
         private void CuaHang_Load(object sender, EventArgs e)
         {
@@ -90,7 +85,8 @@ namespace DAI_LY_BAN_Xe
                 txt_tennhacc.Text = "";
                 txt_diachi.Text = "";
             txt_sodienthoaincc.Text = "";
-            loadncc();
+            DataTable dt=SQLcode.laydanhsachncc();
+            load(datag_nhacc, dt);
         }
 
         private void datag_nhacc_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -143,7 +139,8 @@ namespace DAI_LY_BAN_Xe
                     if (SQLcode.themncc(a, b, c, d) > 0)
                     {
                         MessageBox.Show("Thêm nhà cung cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        loadncc();
+                        DataTable dt = SQLcode.laydanhsachncc();
+                        load(datag_nhacc, dt);
                         txt_manhcc.Text = "";
                         txt_tennhacc.Text = "";
                         txt_diachi.Text = "";
@@ -181,7 +178,8 @@ namespace DAI_LY_BAN_Xe
                     {
                         
                         MessageBox.Show("Xóanhà cung cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        loadncc();
+                        DataTable dt = SQLcode.laydanhsachncc();
+                        load(datag_nhacc, dt);
                         txt_manhcc.Text = "";
                         
                     }
@@ -221,7 +219,8 @@ namespace DAI_LY_BAN_Xe
                     if (SQLcode.suancc(a,b, c, d) > 0)
                     {
                         MessageBox.Show("sữa nhà cung cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        loadncc();
+                        DataTable dt = SQLcode.laydanhsachncc();
+                        load(datag_nhacc, dt);
                         txt_manhcc.Text = "";
                         txt_tennhacc.Text = "";
                         txt_diachi.Text = "";
@@ -262,5 +261,66 @@ namespace DAI_LY_BAN_Xe
             }
         }
 
+        private void radioButton_nhaphang_CheckedChanged(object sender, EventArgs e)
+        {
+            DataTable dt = SQLcode.layhoadonnhap();
+            load(datag_hoadon, dt);
+            combox_mahoadon.DataSource = SQLcode.laymahoadonnhap();
+            combox_mahoadon.DisplayMember = "Mã hóa đơn";
+        }
+
+        private void btn_lammoihoadon_Click(object sender, EventArgs e)
+        {
+            datag_hoadon.Visible = true;
+            radioButton_nhaphang.Checked = true;
+           combox_mahoadon.DataSource=SQLcode.laymahoadonnhap();
+            combox_mahoadon.DisplayMember = "Mã hóa đơn";
+            DataTable dt = SQLcode.layhoadonnhap();
+            load(datag_hoadon, dt);
+            btn_chitiet.Visible = true;
+            btn_timkiemhoadon.Visible = true;
+        }
+
+        private void btn_chitiet_Click(object sender, EventArgs e)
+        {
+            btn_timkiemhoadon.Visible = false;
+            if (radioButton_nhaphang.Checked)
+            {
+                string a=combox_mahoadon.Text.Trim();
+                DataTable dt = SQLcode.laychitiethoadonnhap(a);
+                load(datag_hoadon, dt);
+            }
+            if (radioButton_banhang.Checked)
+            {
+                string a = combox_mahoadon.Text.Trim();
+                DataTable dt = SQLcode.laychitiethoadonban(a);
+                load(datag_hoadon, dt);
+            }
+        }
+
+        private void btn_timkiemhoadon_Click(object sender, EventArgs e)
+        {
+            DateTime dto= datapc_ngaylamhd.Value;
+            string a = combox_mahoadon.Text.Trim();
+            if (radioButton_nhaphang.Checked)
+            {
+                
+                DataTable dt = SQLcode.timkiemhoadonnhap(dto);
+                load(datag_hoadon, dt);
+            }
+            if (radioButton_banhang.Checked)
+            {
+                DataTable dt = SQLcode.timkiemhoadonban(dto);
+                load(datag_hoadon, dt);
+            }
+        }
+
+        private void radioButton_banhang_CheckedChanged(object sender, EventArgs e)
+        {
+            DataTable dt = SQLcode.layhoadonban();
+            load(datag_hoadon, dt);
+            combox_mahoadon.DataSource = SQLcode.laymahoadonban();
+            combox_mahoadon.DisplayMember = "Mã hóa đơn";
+        }
     }
 }

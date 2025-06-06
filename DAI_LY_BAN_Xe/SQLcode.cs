@@ -131,7 +131,123 @@ namespace DAI_LY_BAN_Xe
             return dt;
         }
 
+        public DataTable laymahoadonnhap()
+        {
+            DataTable dt = new DataTable();
+            string query = "laymahoadonnhap"; // tên procedure
 
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
+        public DataTable layhoadonnhap()
+        {
+            DataTable dt = new DataTable();
+            string query = "LAYHOADONNHAP"; // tên procedure
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
+
+        public DataTable laychitiethoadonnhap(string a)
+        {
+            DataTable dt = new DataTable();
+            string query = "laychitiethoadonnhap"; // tên procedure
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@mahd", a);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
+        public DataTable timkiemhoadonnhap(DateTime a)
+        {
+            DataTable dt = new DataTable();
+            string query = "timkiemhoadonnhap"; // tên procedure
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ngay", a);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
+        public DataTable layhoadonban()
+        {
+            DataTable dt = new DataTable();
+            string query = "LAYHOADONBAN"; // tên procedure
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
+        public DataTable laymahoadonban()
+        {
+            DataTable dt = new DataTable();
+            string query = "LAYmaHOADONBAN"; // tên procedure
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
+        public DataTable laychitiethoadonban(string a)
+        {
+            DataTable dt = new DataTable();
+            string query = "laychitiethoadonban"; // tên procedure
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@mahd", a);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
+        public DataTable timkiemhoadonban(DateTime a)
+        {
+            DataTable dt = new DataTable();
+            string query = "timkiemhoadonban"; // tên procedure
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ngay", a);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
         public void dongketnoi()
         {
             conn.Close();

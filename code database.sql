@@ -171,3 +171,130 @@ BEGIN
         (@mancc IS NULL OR MANCC LIKE '%' + @mancc + '%') AND
         (@tenncc IS NULL OR TENNCC LIKE N'%' + @tenncc + '%')
 END
+
+-- TAIKHOAN
+INSERT INTO TAIKHOAN VALUES
+(N'admin', N'admin123', N'Admin'),
+(N'nhanvien01', N'nv123', N'NhanVien'),
+(N'khach01', N'khach123', N'KhachHang');
+
+-- NHANVIEN
+INSERT INTO NHANVIEN VALUES
+('NV001', N'Nguyễn Văn A', N'Quản lý', 'a.nguyen@example.com', '0901234567'),
+('NV002', N'Trần Thị B', N'Nhân viên bán hàng', 'b.tran@example.com', '0912345678');
+
+-- KHACHHANG
+INSERT INTO KHACHHANG VALUES
+('KH001', N'Lê Văn C', '0923456789', 50000000),
+('KH002', N'Phạm Thị D', '0934567890', 75000000);
+
+-- NHACUNGCAP
+INSERT INTO NHACUNGCAP VALUES
+('NCC001', N'Công ty Yamaha', N'123 Lý Thường Kiệt, Q.10, TP.HCM', '0945678901'),
+('NCC002', N'Công ty Honda', N'456 Nguyễn Trãi, Q.5, TP.HCM', '0956789012');
+
+-- XEMAY
+INSERT INTO XEMAY (MAXE, TENXE, HANGSX, NAMSX, TINHTRANG, NGUONGOC, ANH) VALUES
+('XE001', N'Exciter 150', N'Yamaha', '2022', N'Mới', N'Việt Nam', NULL),
+('XE002', N'Winner X', N'Honda', '2023', N'Mới', N'Nhật Bản', NULL);
+
+-- NHAPHANG
+INSERT INTO NHAPHANG VALUES
+('NH001', '2025-06-01', 60000000, 'NV001', 'NCC001'),
+('NH002', '2025-06-03', 70000000, 'NV002', 'NCC002');
+
+-- CT_NHAPHANG
+INSERT INTO CT_NHAPHANG VALUES
+('NH001', 'XE001', 3, 20000000),
+('NH002', 'XE002', 2, 35000000);
+
+-- BAOHIEM
+INSERT INTO BAOHIEM VALUES
+('BH001', 'XE001', '2025-06-01', '2026-06-01'),
+('BH002', 'XE002', '2025-06-03', '2026-06-03');
+
+-- HOADON
+INSERT INTO HOADON VALUES
+('HD001', '2025-06-05', 40000000, 'KH001', 'NV001'),
+('HD002', '2025-06-06', 35000000, 'KH002', 'NV002');
+
+-- CT_HOADON
+INSERT INTO CT_HOADON VALUES
+('HD001', 'XE001', 2, 20000000),
+('HD002', 'XE002', 1, 35000000);
+
+
+CREATE PROCEDURE LAYHOADONNHAP
+AS 
+BEGIN
+
+	SELECT NH.MANHAP N'Mã hóa đơn', NH.MANCC N'Mã nhà cung cấp', NH.MANV N'Mã nhân viên',NH.TONGTIEN N'Tổng tiền',NH.NGAYNHAP N'Ngày lập'
+	FROM NHAPHANG NH
+END
+drop PROCEDURE LAYHOADONNHAP
+
+Create procedure laymahoadonnhap
+as
+begin
+	SELECT NH.MANHAP N'Mã hóa đơn'
+	FROM NHAPHANG NH
+end
+
+create procedure laychitiethoadonnhap(
+@mahd char(10))as
+begin
+	select ctnh.MANHAP N'Mã hóa đơn',ctnh.MAXE  N'Mã Xe', ctnh.SOLUONG N'Số lượng' , ctnh.DONGIA N'Đơn giá'
+	from CT_NHAPHANG ctnh
+	where trim(ctnh.MANHAP)=trim(@mahd)
+
+end
+
+laychitiethoadonnhap 'NH001'
+
+create procedure timkiemhoadonnhap(
+@ngay date
+)as
+
+begin
+
+	SELECT NH.MANHAP N'Mã hóa đơn', NH.MANCC N'Mã nhà cung cấp', NH.MANV N'Mã nhân viên',NH.TONGTIEN N'Tổng tiền',NH.NGAYNHAP N'Ngày lập'
+	FROM NHAPHANG NH
+	where NH.NGAYNHAP=@ngay
+end
+
+
+CREATE PROCEDURE LAYHOADONBAN
+AS 
+BEGIN
+
+	SELECT NH.MAHD N'Mã hóa đơn', NH.MAKH N'Mã khách hàng ',NH.MANV N'Mã nhân viên',NH.TONGTIEN N'Tổng tiền',NH.NGAYLAP N'Ngày lập'
+	FROM HOADON NH
+END
+
+CREATE PROCEDURE LAYmaHOADONBAN
+AS 
+BEGIN
+
+	SELECT NH.MAHD N'Mã hóa đơn'
+	FROM HOADON NH
+END
+
+create procedure laychitiethoadonban(
+@mahd char(10))as
+begin
+	select ctnh.MAHD N'Mã hóa đơn',ctnh.MAXE  N'Mã Xe', ctnh.SOLUONG N'Số lượng' , ctnh.DONGIA N'Đơn giá'
+	from CT_HOADON ctnh
+	where trim(ctnh.MAHD)=trim(@mahd)
+
+end
+
+create procedure timkiemhoadonban(
+@ngay date
+)as
+
+begin
+
+	SELECT NH.MAHD N'Mã hóa đơn', NH.MAKH N'Mã khách hàng ',NH.MANV N'Mã nhân viên',NH.TONGTIEN N'Tổng tiền',NH.NGAYLAP N'Ngày lập'
+	FROM HOADON NH
+	where NH.NGAYLAP=@ngay
+end
