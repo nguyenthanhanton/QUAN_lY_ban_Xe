@@ -181,9 +181,7 @@
             this.page_BH = new System.Windows.Forms.TabPage();
             this.datag_baohanh = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label69 = new System.Windows.Forms.Label();
-            this.datep_ngaybatdau = new System.Windows.Forms.DateTimePicker();
+            this.combobox_baohanh = new System.Windows.Forms.ComboBox();
             this.btn_lammoibh = new System.Windows.Forms.Button();
             this.nmb_thoihan = new System.Windows.Forms.NumericUpDown();
             this.label54 = new System.Windows.Forms.Label();
@@ -235,6 +233,8 @@
             this.doanhSốToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.KháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label55 = new System.Windows.Forms.Label();
+            this.txt_checkbaohanh = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.page_ban_xe.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -2022,13 +2022,14 @@
             this.datag_baohanh.RowTemplate.Height = 24;
             this.datag_baohanh.Size = new System.Drawing.Size(1709, 402);
             this.datag_baohanh.TabIndex = 2;
+            this.datag_baohanh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datag_baohanh_CellClick);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel5.Controls.Add(this.comboBox1);
-            this.panel5.Controls.Add(this.label69);
-            this.panel5.Controls.Add(this.datep_ngaybatdau);
+            this.panel5.Controls.Add(this.txt_checkbaohanh);
+            this.panel5.Controls.Add(this.label55);
+            this.panel5.Controls.Add(this.combobox_baohanh);
             this.panel5.Controls.Add(this.btn_lammoibh);
             this.panel5.Controls.Add(this.nmb_thoihan);
             this.panel5.Controls.Add(this.label54);
@@ -2048,35 +2049,16 @@
             this.panel5.Size = new System.Drawing.Size(1709, 364);
             this.panel5.TabIndex = 1;
             // 
-            // comboBox1
+            // combobox_baohanh
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(532, 136);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 33);
-            this.comboBox1.TabIndex = 60;
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label69.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.Location = new System.Drawing.Point(395, 231);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(130, 25);
-            this.label69.TabIndex = 59;
-            this.label69.Text = "Ngày bắt đầu";
-            // 
-            // datep_ngaybatdau
-            // 
-            this.datep_ngaybatdau.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold);
-            this.datep_ngaybatdau.Location = new System.Drawing.Point(532, 225);
-            this.datep_ngaybatdau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datep_ngaybatdau.Name = "datep_ngaybatdau";
-            this.datep_ngaybatdau.Size = new System.Drawing.Size(328, 31);
-            this.datep_ngaybatdau.TabIndex = 58;
+            this.combobox_baohanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_baohanh.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold);
+            this.combobox_baohanh.FormattingEnabled = true;
+            this.combobox_baohanh.Location = new System.Drawing.Point(532, 136);
+            this.combobox_baohanh.Name = "combobox_baohanh";
+            this.combobox_baohanh.Size = new System.Drawing.Size(177, 33);
+            this.combobox_baohanh.TabIndex = 60;
+            this.combobox_baohanh.SelectedIndexChanged += new System.EventHandler(this.combobox_baohanh_SelectedIndexChanged);
             // 
             // btn_lammoibh
             // 
@@ -2088,11 +2070,12 @@
             this.btn_lammoibh.TabIndex = 57;
             this.btn_lammoibh.Text = "làm mới";
             this.btn_lammoibh.UseVisualStyleBackColor = true;
+            this.btn_lammoibh.Click += new System.EventHandler(this.btn_lammoibh_Click);
             // 
             // nmb_thoihan
             // 
             this.nmb_thoihan.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold);
-            this.nmb_thoihan.Location = new System.Drawing.Point(1055, 224);
+            this.nmb_thoihan.Location = new System.Drawing.Point(1055, 34);
             this.nmb_thoihan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nmb_thoihan.Name = "nmb_thoihan";
             this.nmb_thoihan.Size = new System.Drawing.Size(120, 31);
@@ -2103,7 +2086,7 @@
             this.label54.AutoSize = true;
             this.label54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label54.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(917, 230);
+            this.label54.Location = new System.Drawing.Point(896, 41);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(91, 25);
             this.label54.TabIndex = 51;
@@ -2164,13 +2147,14 @@
             // btn_searchbh
             // 
             this.btn_searchbh.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_searchbh.Location = new System.Drawing.Point(1465, 283);
+            this.btn_searchbh.Location = new System.Drawing.Point(1465, 292);
             this.btn_searchbh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_searchbh.Name = "btn_searchbh";
-            this.btn_searchbh.Size = new System.Drawing.Size(121, 50);
+            this.btn_searchbh.Size = new System.Drawing.Size(154, 50);
             this.btn_searchbh.TabIndex = 10;
-            this.btn_searchbh.Text = "Tìm kiếm";
+            this.btn_searchbh.Text = "Check bảo hành";
             this.btn_searchbh.UseVisualStyleBackColor = true;
+            this.btn_searchbh.Click += new System.EventHandler(this.btn_searchbh_Click);
             // 
             // btn_deletebh
             // 
@@ -2182,6 +2166,7 @@
             this.btn_deletebh.TabIndex = 9;
             this.btn_deletebh.Text = "Xóa";
             this.btn_deletebh.UseVisualStyleBackColor = true;
+            this.btn_deletebh.Click += new System.EventHandler(this.btn_deletebh_Click);
             // 
             // btn_editbh
             // 
@@ -2193,6 +2178,7 @@
             this.btn_editbh.TabIndex = 8;
             this.btn_editbh.Text = "Sữa";
             this.btn_editbh.UseVisualStyleBackColor = true;
+            this.btn_editbh.Click += new System.EventHandler(this.btn_editbh_Click);
             // 
             // btn_addbh
             // 
@@ -2204,6 +2190,7 @@
             this.btn_addbh.TabIndex = 7;
             this.btn_addbh.Text = "Thêm";
             this.btn_addbh.UseVisualStyleBackColor = true;
+            this.btn_addbh.Click += new System.EventHandler(this.btn_addbh_Click);
             // 
             // page_NCC
             // 
@@ -2433,7 +2420,7 @@
             this.combox_mahoadon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combox_mahoadon.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold);
             this.combox_mahoadon.FormattingEnabled = true;
-            this.combox_mahoadon.Location = new System.Drawing.Point(538, 33);
+            this.combox_mahoadon.Location = new System.Drawing.Point(1021, 203);
             this.combox_mahoadon.Name = "combox_mahoadon";
             this.combox_mahoadon.Size = new System.Drawing.Size(177, 33);
             this.combox_mahoadon.TabIndex = 58;
@@ -2441,7 +2428,7 @@
             // btn_lammoihoadon
             // 
             this.btn_lammoihoadon.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_lammoihoadon.Location = new System.Drawing.Point(347, 272);
+            this.btn_lammoihoadon.Location = new System.Drawing.Point(509, 277);
             this.btn_lammoihoadon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_lammoihoadon.Name = "btn_lammoihoadon";
             this.btn_lammoihoadon.Size = new System.Drawing.Size(121, 50);
@@ -2453,7 +2440,7 @@
             // btn_chitiet
             // 
             this.btn_chitiet.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_chitiet.Location = new System.Drawing.Point(1465, 206);
+            this.btn_chitiet.Location = new System.Drawing.Point(1315, 203);
             this.btn_chitiet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_chitiet.Name = "btn_chitiet";
             this.btn_chitiet.Size = new System.Drawing.Size(121, 50);
@@ -2466,7 +2453,7 @@
             // radioButton_banhang
             // 
             this.radioButton_banhang.AutoSize = true;
-            this.radioButton_banhang.Location = new System.Drawing.Point(93, 113);
+            this.radioButton_banhang.Location = new System.Drawing.Point(509, 159);
             this.radioButton_banhang.Name = "radioButton_banhang";
             this.radioButton_banhang.Size = new System.Drawing.Size(91, 22);
             this.radioButton_banhang.TabIndex = 54;
@@ -2478,7 +2465,7 @@
             // 
             this.radioButton_nhaphang.AutoSize = true;
             this.radioButton_nhaphang.Checked = true;
-            this.radioButton_nhaphang.Location = new System.Drawing.Point(93, 46);
+            this.radioButton_nhaphang.Location = new System.Drawing.Point(509, 92);
             this.radioButton_nhaphang.Name = "radioButton_nhaphang";
             this.radioButton_nhaphang.Size = new System.Drawing.Size(100, 22);
             this.radioButton_nhaphang.TabIndex = 53;
@@ -2522,7 +2509,7 @@
             this.label67.AutoSize = true;
             this.label67.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label67.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.Location = new System.Drawing.Point(395, 41);
+            this.label67.Location = new System.Drawing.Point(867, 206);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(113, 25);
             this.label67.TabIndex = 25;
@@ -2531,7 +2518,7 @@
             // btn_timkiemhoadon
             // 
             this.btn_timkiemhoadon.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_timkiemhoadon.Location = new System.Drawing.Point(1465, 85);
+            this.btn_timkiemhoadon.Location = new System.Drawing.Point(1315, 41);
             this.btn_timkiemhoadon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_timkiemhoadon.Name = "btn_timkiemhoadon";
             this.btn_timkiemhoadon.Size = new System.Drawing.Size(121, 50);
@@ -2626,6 +2613,27 @@
             this.KháchHàngToolStripMenuItem.Name = "KháchHàngToolStripMenuItem";
             this.KháchHàngToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
             this.KháchHàngToolStripMenuItem.Text = " khách hàng";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label55.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(1105, 302);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(110, 25);
+            this.label55.TabIndex = 61;
+            this.label55.Text = "Mã hóa đơn";
+            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_checkbaohanh
+            // 
+            this.txt_checkbaohanh.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txt_checkbaohanh.Location = new System.Drawing.Point(1251, 302);
+            this.txt_checkbaohanh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_checkbaohanh.Name = "txt_checkbaohanh";
+            this.txt_checkbaohanh.Size = new System.Drawing.Size(177, 31);
+            this.txt_checkbaohanh.TabIndex = 62;
             // 
             // CuaHang
             // 
@@ -2906,13 +2914,13 @@
         private System.Windows.Forms.Button btn_lammoixe;
         private System.Windows.Forms.Button btn_lammoibh;
         private System.Windows.Forms.Button btn_lammoincc;
-        private System.Windows.Forms.DateTimePicker datep_ngaybatdau;
-        private System.Windows.Forms.Label label69;
         private System.Windows.Forms.Button btn_chitiet;
         private System.Windows.Forms.RadioButton radioButton_banhang;
         private System.Windows.Forms.RadioButton radioButton_nhaphang;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox combobox_baohanh;
         private System.Windows.Forms.Button btn_lammoihoadon;
         private System.Windows.Forms.ComboBox combox_mahoadon;
+        private System.Windows.Forms.TextBox txt_checkbaohanh;
+        private System.Windows.Forms.Label label55;
     }
 }

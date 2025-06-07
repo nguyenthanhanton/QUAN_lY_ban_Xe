@@ -19,7 +19,7 @@ namespace DAI_LY_BAN_Xe
             InitializeComponent();
         }
 
- 
+        
         private void load(DataGridView dgv, DataTable dt)
         {                       
             dgv.DataSource = dt;
@@ -41,6 +41,7 @@ namespace DAI_LY_BAN_Xe
         {
             SQLcode.taoketnoi();
             this.Size = new Size(1742, 896);
+            datag_baohanh.Visible = false;
 
         }
 
@@ -321,6 +322,218 @@ namespace DAI_LY_BAN_Xe
             load(datag_hoadon, dt);
             combox_mahoadon.DataSource = SQLcode.laymahoadonban();
             combox_mahoadon.DisplayMember = "Mã hóa đơn";
+        }
+
+        int sukienbaohanhnhan = 0;
+
+        private void btn_lammoibh_Click(object sender, EventArgs e)
+        {
+            datag_baohanh.Visible = true;
+            combobox_baohanh.DataSource = SQLcode.Laymaxemay();
+            combobox_baohanh.DisplayMember = "Mã xe";
+            string a=combobox_baohanh.Text.Trim();
+            DataTable v=SQLcode.timkiemtenxemay(a);
+            txt_tenxebh.Text = v.Rows[0]["Tên xe"].ToString();
+            txt_mabh.Text = "";
+            nmb_thoihan.Value = 0;
+            DataTable dt = SQLcode.laydanhsachbaohanh();
+            load(datag_baohanh, dt);
+            txt_checkbaohanh.Text = "";
+            sukienbaohanhnhan = 0;
+           
+        }
+
+        private void combobox_baohanh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string a = combobox_baohanh.Text.Trim();
+            DataTable v = SQLcode.timkiemtenxemay(a);
+            txt_tenxebh.Text = v.Rows[0]["Tên xe"].ToString();
+        }
+
+        private void datag_baohanh_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (sukienbaohanhnhan == 0)
+            {
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = datag_baohanh.Rows[e.RowIndex];
+
+                    // Nếu dùng header tiếng Việt thì cần đúng chính tả hoàn toàn!
+                    try
+                    {
+                        txt_mabh.Text = row.Cells["Mã bảo hành"].Value?.ToString();
+                        combobox_baohanh.Text = row.Cells["Mã Xe"].Value?.ToString();
+                        nmb_thoihan.Value = Convert.ToDecimal(row.Cells["Thời hạn"].Value);
+                        string a = combobox_baohanh.Text.Trim();
+                        DataTable v = SQLcode.timkiemtenxemay(a);
+                        txt_tenxebh.Text = v.Rows[0]["Tên xe"].ToString();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi khi hiển thị thông tin nhà cung cấp: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void btn_addbh_Click(object sender, EventArgs e)
+        {
+            string a, b;
+            int c;
+            a = txt_mabh.Text.Trim();
+            b = combobox_baohanh.Text.Trim();
+            c = (int)nmb_thoihan.Value;
+            if (a == "")
+            {
+                MessageBox.Show("Vui lòng nhập mã bảo hành!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if(!Regex.IsMatch(a, @"^BH\d{3}$"))
+            {
+
+                MessageBox.Show("Nhập không đúng, vui lòng nhập theo mẫu BH___ với mỗi _ là 1 số");
+                return;
+            }
+            else if (SQLcode.timkiemmabaonhanh(a))
+            {
+                MessageBox.Show("Mã bảo hành đã tồn tại");
+                return;
+            }
+            else if (SQLcode.checkxecobaohanhchua(b))
+            {
+                MessageBox.Show("Xe này đã có bảo hành");
+                return;
+
+            }
+            else if (c < 1)
+            {
+                MessageBox.Show("thời hạn bảo hành không dưới 1 năm");
+                return;
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Bạn có muốn them mã bảo hành không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                        MessageBox.Show("Thêm bảo hành thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        SQLcode.thembaohanh(a, b, c);
+                        DataTable dt = SQLcode.laydanhsachbaohanh();
+                        load(datag_baohanh, dt);
+
+                }
+
+            }
+        }
+
+        private void btn_deletebh_Click(object sender, EventArgs e)
+        {
+            string a;
+            a = txt_mabh.Text.Trim();
+            if (a == "")
+            {
+                MessageBox.Show("Vui lòng nhập mã bảo hành!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (!Regex.IsMatch(a, @"^BH\d{3}$"))
+            {
+
+                MessageBox.Show("Nhập không đúng, vui lòng nhập theo mẫu BH___ với mỗi _ là 1 số");
+                return;
+            }
+            else if (!SQLcode.timkiemmabaonhanh(a))
+            {
+                MessageBox.Show("Mã bảo hành không tồn tại");
+                return;
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Bạn có muốn Xóa mã bảo hành không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show("Xóa bảo hành thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SQLcode.Xoabaohanh(a);
+                    DataTable dt = SQLcode.laydanhsachbaohanh();
+                    load(datag_baohanh, dt);
+
+                }
+
+            }
+        }
+
+        private void btn_editbh_Click(object sender, EventArgs e)
+        {
+            string a, b;
+            int c;
+            a = txt_mabh.Text.Trim();
+            c = (int)nmb_thoihan.Value;
+            if (a == "")
+            {
+                MessageBox.Show("Vui lòng nhập mã bảo hành!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (!Regex.IsMatch(a, @"^BH\d{3}$"))
+            {
+
+                MessageBox.Show("Nhập không đúng, vui lòng nhập theo mẫu BH___ với mỗi _ là 1 số");
+                return;
+            }
+            else if (!SQLcode.timkiemmabaonhanh(a))
+            {
+                MessageBox.Show("Mã bảo hành không tồn tại");
+                return;
+            }
+         
+            else if (c < 1)
+            {
+                MessageBox.Show("thời hạn bảo hành không dưới 1 năm");
+                return;
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Bạn có muốn sữa mã bảo hành không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show("Thêm bảo sữa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SQLcode.suabaohanh(a,c);
+                    DataTable dt = SQLcode.laydanhsachbaohanh();
+                    load(datag_baohanh, dt);
+
+                }
+
+            }
+
+        }
+
+        private void btn_searchbh_Click(object sender, EventArgs e)
+        {
+            string a;
+            a = txt_checkbaohanh.Text.Trim();
+            if (a == "")
+            {
+                MessageBox.Show("Vui lòng nhập mã hóa đơn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (!Regex.IsMatch(a, @"^HD\d{3}$"))
+            {
+
+                MessageBox.Show("Nhập không đúng, vui lòng nhập theo mẫu HD___ với mỗi _ là 1 số");
+                return;
+            }
+            else if (!SQLcode.hoadontontai(a))
+            {
+                MessageBox.Show("Mã bảo hành không tồn tại");
+                return;
+            }
+
+            else
+            {
+                datag_baohanh.Visible = true;
+                sukienbaohanhnhan = 1;
+                DataTable dt = SQLcode.checkhoadonconbaohanhkhong(a,DateTime.Now);
+                load(datag_baohanh, dt);
+                
+            }
         }
     }
 }

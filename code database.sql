@@ -79,8 +79,7 @@ CREATE TABLE CT_NHAPHANG (
 CREATE TABLE BAOHIEM (
 	MABH VARCHAR(10),
 	MAXE VARCHAR(10),
-	NGAYBATDAU DATE,
-	THOIHAN DATE,
+	THOIHAN int,
 	PRIMARY KEY (MABH, MAXE),
 	FOREIGN KEY (MAXE) REFERENCES XEMAY(MAXE)
 );
@@ -210,8 +209,8 @@ INSERT INTO CT_NHAPHANG VALUES
 
 -- BAOHIEM
 INSERT INTO BAOHIEM VALUES
-('BH001', 'XE001', '2025-06-01', '2026-06-01'),
-('BH002', 'XE002', '2025-06-03', '2026-06-03');
+('BH001', 'XE001', 1),
+('BH002', 'XE002', 2 );
 
 -- HOADON
 INSERT INTO HOADON VALUES
@@ -297,4 +296,97 @@ begin
 	SELECT NH.MAHD N'Mã hóa đơn', NH.MAKH N'Mã khách hàng ',NH.MANV N'Mã nhân viên',NH.TONGTIEN N'Tổng tiền',NH.NGAYLAP N'Ngày lập'
 	FROM HOADON NH
 	where NH.NGAYLAP=@ngay
+end
+
+
+create procedure laymaxemay 
+as begin
+	select xm.MAXE N'Mã xe'
+	from XEMAY xm
+end
+
+create procedure timkiemmaxemay(@maxe char(10))
+as begin
+	select xm.MAXE N'Mã xe'
+	from XEMAY xm
+	where TRIM(xm.MAXE)=trim(@maxe)
+end
+
+
+create procedure timkiemtenxemay(@maxe char(10))
+as begin
+	select xm.TENXE N'Tên xe'
+	from XEMAY xm
+	where TRIM(xm.MAXE)=trim(@maxe)
+end
+
+create procedure laydanhsachbaohanh as begin
+	select bh.MABH N'Mã bảo hành' ,bh.MAXE N'Mã Xe', bh.THOIHAN N'Thời hạn'
+	from BAOHIEM bh
+
+end
+
+create procedure timkiemmabaonhanh (@mabh char(10))as 
+begin
+select bh.MABH N'Mã bảo hành' 
+	from BAOHIEM bh
+	where trim(bh.MABH)=trim(@mabh)
+end
+create procedure checkxecobaohanhchua (@maxe char(10))as
+begin
+select bh.MAXE N'Mã xe' 
+	from BAOHIEM bh
+	where trim(bh.MAXE)=trim(@maxe)
+end
+create procedure thembaohanh(
+@mabh char(10),
+@maxe char (10),
+@thoihan int
+)as
+begin
+insert into BAOHIEM (MABH,MAXE,THOIHAN) values (@mabh,@maxe,@thoihan)
+end
+
+thembaohanh  'BH003','XE003',1
+
+create procedure xoabaohanh(@mabh char(10))as 
+begin
+	delete from BAOHIEM
+	where trim(MABH)=trim(@mabh)
+end 
+create procedure suabaohanh (
+@mabh char(10),
+@thoihan int
+)
+as begin
+	update BAOHIEM
+	set THOIHAN=@thoihan
+	where trim(MABH)=trim(@mabh)
+end
+
+
+CREATE PROCEDURE checkhoadonconbaohanhkhong
+(
+    @hoadon CHAR(10),
+    @date DATE
+)
+AS
+BEGIN
+	select xm.MAXE N'Mã xe', xm.TENXE N'Tên xe'
+	from XEMAY xm
+	where xm.MAXE in( SELECT bh.MAXE 
+    FROM BAOHIEM bh
+    JOIN CT_HOADON cthd ON bh.MAXE = cthd.MAXE
+    JOIN HOADON hd ON hd.MAHD = cthd.MAHD
+    WHERE hd.MAHD = @hoadon
+      AND DATEADD(YEAR, bh.THOIHAN, hd.NGAYLAP) > @date)
+END
+drop PROCEDURE checkhoadonconbaohanhkhong
+
+create procedure timkiemhoadon (@mahd char(10))
+as 
+begin
+	select hd.MAHD N'Mã hóa đơn'
+	from HOADON hd
+	where trim(hd.MAHD)=trim(@mahd)
 end

@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|d:\\quan_ly_ban_xe\\dai_ly_ban_xe\\cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\sqlcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:sqlcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|d:\\quan_ly_ban_xe\\dai_ly_ban_xe\\cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -43,7 +43,21 @@
               "ViewState": "AgIAAAkAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T01:43:12.763Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SQLcode.cs",
+              "DocumentMoniker": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\SQLcode.cs",
+              "RelativeDocumentMoniker": "SQLcode.cs",
+              "ToolTip": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\SQLcode.cs",
+              "RelativeToolTip": "SQLcode.cs",
+              "ViewState": "AgIAAIABAAAAAAAAAADwv58BAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T01:56:37.021Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -60,32 +74,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SQLcode.cs",
-              "DocumentMoniker": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\SQLcode.cs",
-              "RelativeDocumentMoniker": "SQLcode.cs",
-              "ToolTip": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\SQLcode.cs",
-              "RelativeToolTip": "SQLcode.cs",
-              "ViewState": "AgIAAOAAAAAAAAAAAAAswPwAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T01:56:37.021Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "CuaHang.cs",
               "DocumentMoniker": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
               "RelativeDocumentMoniker": "CuaHang.cs",
               "ToolTip": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
               "RelativeToolTip": "CuaHang.cs",
-              "ViewState": "AgIAABwBAAAAAAAAAAAIwDoBAAANAAAAAAAAAA==",
+              "ViewState": "AgIAANoBAAAAAAAAAAAAAG0BAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T01:56:04.972Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "CuaHang.cs [Design]",
               "DocumentMoniker": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
               "RelativeDocumentMoniker": "CuaHang.cs",
@@ -104,7 +105,8 @@
               "ToolTip": "D:\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T01:33:07.711Z"
+              "WhenOpened": "2025-05-28T01:33:07.711Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
