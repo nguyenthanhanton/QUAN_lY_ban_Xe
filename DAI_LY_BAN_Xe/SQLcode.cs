@@ -411,6 +411,135 @@ namespace DAI_LY_BAN_Xe
 
             return dt;
         }
+        public DataTable layhanhsachkhachhang()
+        {
+            DataTable dt = new DataTable();
+            string query = "laydanhsachkhachhang"; // tên procedure
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
+        public bool timkiemmakhachhang(string a)
+        {
+            DataTable dt = new DataTable();
+            string query = "timkiemmakhachhang"; // tên procedure
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@makh", a);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            if (dt.Rows.Count > 0) return true;
+            else return false;
+        }
+
+        public bool timkiemsdtkhachhang(string a,string sdt)
+        {
+            DataTable dt = new DataTable();
+            string query = "timkiemsdtkhachhang"; // tên procedure
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@makh", a);
+                cmd.Parameters.AddWithValue("@sdt", sdt);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            if (dt.Rows.Count > 0) return true;
+            else return false;
+        }
+        public void themkhachhang(string a, string b, string c,int sotienchi)
+        {
+
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("[dbo].[themkhachhang]", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    // Thêm tham số cho stored procedure
+                    cmd.Parameters.AddWithValue("@makh", a);
+                    cmd.Parameters.AddWithValue("@tenkh ", b);
+                    cmd.Parameters.AddWithValue("@sdt", c);
+                    cmd.Parameters.AddWithValue("@sotienchi", sotienchi);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi: " + ex.Message);
+            }
+        }
+        public void suakhachhang(string a, string b, string c, int sotienchi)
+        {
+
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("[dbo].[suakhachhang]", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    // Thêm tham số cho stored procedure
+                    cmd.Parameters.AddWithValue("@makh", a);
+                    cmd.Parameters.AddWithValue("@tenkh ", b);
+                    cmd.Parameters.AddWithValue("@sdt", c);
+                    cmd.Parameters.AddWithValue("@sotienchi", sotienchi);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi: " + ex.Message);
+            }
+        }
+        public void xoakhachhang(string a)
+        {
+
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("[dbo].[xoakhachhang]", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    // Thêm tham số cho stored procedure
+                    cmd.Parameters.AddWithValue("@makh", a);
+                    
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi: " + ex.Message);
+            }
+        }
+        public DataTable laydanhsachtimkiemkhachhang(string a, string b, string c)
+        {
+            DataTable dt = new DataTable();
+            string query = "laydanhsachtimkiemkhachhang"; // tên procedure
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@makh", string.IsNullOrEmpty(a) ? (object)DBNull.Value : a);
+                cmd.Parameters.AddWithValue("@tenkh", string.IsNullOrEmpty(b) ? (object)DBNull.Value : b);
+                cmd.Parameters.AddWithValue("@sdt", string.IsNullOrEmpty(c) ? (object)DBNull.Value : c);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
+
+
         public void dongketnoi()
         {
             conn.Close();

@@ -42,6 +42,7 @@ namespace DAI_LY_BAN_Xe
             SQLcode.taoketnoi();
             this.Size = new Size(1742, 896);
             datag_baohanh.Visible = false;
+            dataGridView_khachhang.Visible = false;
 
         }
 
@@ -463,7 +464,7 @@ namespace DAI_LY_BAN_Xe
 
         private void btn_editbh_Click(object sender, EventArgs e)
         {
-            string a, b;
+            string a;
             int c;
             a = txt_mabh.Text.Trim();
             c = (int)nmb_thoihan.Value;
@@ -534,6 +535,211 @@ namespace DAI_LY_BAN_Xe
                 load(datag_baohanh, dt);
                 
             }
+        }
+
+        private void btn_lammoikhachhang_Click(object sender, EventArgs e)
+        {
+            dataGridView_khachhang.Visible = true;
+            DataTable dt = SQLcode.layhanhsachkhachhang();
+            load(dataGridView_khachhang, dt);
+            txt_makhachhang.Text = "";
+            txt_tenkhachhang.Text = "";
+            txt_sdtkhachhang.Text = "";
+            txt_sotienchi.Text = "";
+        }
+
+        private void dataGridView_khachhang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+
+                DataGridViewRow row = dataGridView_khachhang.Rows[e.RowIndex];
+
+                // Nếu dùng header tiếng Việt thì cần đúng chính tả hoàn toàn!
+                try
+                {
+                    txt_makhachhang.Text = row.Cells["Mã khách hàng"].Value?.ToString();
+                    txt_tenkhachhang.Text = row.Cells["Tên khách hàng"].Value?.ToString();
+                    txt_sdtkhachhang.Text = row.Cells["Số điện thoại"].Value?.ToString();
+                    txt_sotienchi.Text = row.Cells["Số tiền chi"].Value?.ToString();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi hiển thị thông tin nhà cung cấp: " + ex.Message);
+                }
+
+
+            }
+        }
+
+        private void btn_addkhachhang_Click(object sender, EventArgs e)
+        {
+            string a, b, c, d;
+
+            a = txt_makhachhang.Text.Trim();   
+            b = txt_tenkhachhang.Text.Trim();
+            c = txt_sdtkhachhang.Text.Trim();
+            d = txt_sotienchi.Text.Trim();
+            if (a == "")
+            {
+                MessageBox.Show("Vui lòng nhập mã Khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (!Regex.IsMatch(a, @"^KH\d{3}$"))
+            {
+
+                MessageBox.Show("Nhập không đúng, vui lòng nhập theo mẫu KH___ với mỗi _ là 1 số");
+                return;
+            }
+            else if (SQLcode.timkiemmakhachhang(a))
+            {
+                MessageBox.Show("Mã khách hàng đã tồn tại");
+                return;
+            }
+            else if (b == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (!Regex.IsMatch(c, @"^0[3|5|7|8|9][0-9]{8}$"))
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại đúng định dạng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (SQLcode.timkiemsdtkhachhang(a,c))
+            {
+                MessageBox.Show("số điện thoại đã tồn tại");
+                return;
+            }
+            else if (!Regex.IsMatch(d, @"^\d+$"))
+            {
+                MessageBox.Show("Vui lòng nhập số tiền chi là 1 số nguyên!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                int sotienchi=int.Parse(d);
+                DialogResult result = MessageBox.Show("Bạn có muốn thêm khách hàng không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show("Thêm khách hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SQLcode.themkhachhang(a, b, c,sotienchi);
+                    DataTable dt = SQLcode.layhanhsachkhachhang();
+                    load(dataGridView_khachhang, dt);
+
+                }
+
+            }
+
+        }
+
+        private void btn_editkhachhang_Click(object sender, EventArgs e)
+        {
+            string a, b, c, d;
+
+            a = txt_makhachhang.Text.Trim();
+            b = txt_tenkhachhang.Text.Trim();
+            c = txt_sdtkhachhang.Text.Trim();
+            d = txt_sotienchi.Text.Trim();
+            if (a == "")
+            {
+                MessageBox.Show("Vui lòng nhập mã Khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (!Regex.IsMatch(a, @"^KH\d{3}$"))
+            {
+
+                MessageBox.Show("Nhập không đúng, vui lòng nhập theo mẫu KH___ với mỗi _ là 1 số");
+                return;
+            }
+            else if (!SQLcode.timkiemmakhachhang(a))
+            {
+                MessageBox.Show("Mã khách hàng không tồn tại");
+                return;
+            }
+            else if (b == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (!Regex.IsMatch(c, @"^0[3|5|7|8|9][0-9]{8}$"))
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại đúng định dạng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (SQLcode.timkiemsdtkhachhang(a, c))
+            {
+                MessageBox.Show("số điện thoại đã tồn tại");
+                return;
+            }
+            else if (!Regex.IsMatch(d, @"^\d+$"))
+            {
+                MessageBox.Show("Vui lòng nhập số tiền chi là 1 số nguyên!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                int sotienchi = int.Parse(d);
+                DialogResult result = MessageBox.Show("Bạn có muốn sữa khách hàng không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show("sữa khách hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SQLcode.suakhachhang(a, b, c, sotienchi);
+                    DataTable dt = SQLcode.layhanhsachkhachhang();
+                    load(dataGridView_khachhang, dt);
+
+                }
+
+            }
+        }
+
+        private void btn_deletekhachahang_Click(object sender, EventArgs e)
+        {
+            string a;
+
+            a = txt_makhachhang.Text.Trim();
+            
+            if (a == "")
+            {
+                MessageBox.Show("Vui lòng nhập mã Khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (!Regex.IsMatch(a, @"^KH\d{3}$"))
+            {
+
+                MessageBox.Show("Nhập không đúng, vui lòng nhập theo mẫu KH___ với mỗi _ là 1 số");
+                return;
+            }
+            else if (!SQLcode.timkiemmakhachhang(a))
+            {
+                MessageBox.Show("Mã khách hàng không tồn tại");
+                return;
+            }
+            else
+            {
+                
+                DialogResult result = MessageBox.Show("Bạn có muốn xóa khách hàng không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show("xóa khách hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SQLcode.xoakhachhang(a);
+                    DataTable dt = SQLcode.layhanhsachkhachhang();
+                    load(dataGridView_khachhang, dt);
+
+                }
+
+            }
+        }
+
+        private void btn_searchkhachhang_Click(object sender, EventArgs e)
+        {
+            string a, b, c;
+
+            a = txt_makhachhang.Text.Trim();
+            b = txt_tenkhachhang.Text.Trim();
+            c = txt_sdtkhachhang.Text.Trim();
+            txt_sotienchi.Text="";
+            DataTable dt = SQLcode.laydanhsachtimkiemkhachhang(a,b,c);
+            load(dataGridView_khachhang, dt);
         }
     }
 }

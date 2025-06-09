@@ -181,6 +181,8 @@
             this.page_BH = new System.Windows.Forms.TabPage();
             this.datag_baohanh = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.txt_checkbaohanh = new System.Windows.Forms.TextBox();
+            this.label55 = new System.Windows.Forms.Label();
             this.combobox_baohanh = new System.Windows.Forms.ComboBox();
             this.btn_lammoibh = new System.Windows.Forms.Button();
             this.nmb_thoihan = new System.Windows.Forms.NumericUpDown();
@@ -223,6 +225,22 @@
             this.label67 = new System.Windows.Forms.Label();
             this.btn_timkiemhoadon = new System.Windows.Forms.Button();
             this.datag_hoadon = new System.Windows.Forms.DataGridView();
+            this.Page_khachhang = new System.Windows.Forms.TabPage();
+            this.dataGridView_khachhang = new System.Windows.Forms.DataGridView();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btn_lammoikhachhang = new System.Windows.Forms.Button();
+            this.txt_sotienchi = new System.Windows.Forms.TextBox();
+            this.txt_tenkhachhang = new System.Windows.Forms.TextBox();
+            this.label66 = new System.Windows.Forms.Label();
+            this.txt_sdtkhachhang = new System.Windows.Forms.TextBox();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.txt_makhachhang = new System.Windows.Forms.TextBox();
+            this.btn_searchkhachhang = new System.Windows.Forms.Button();
+            this.btn_deletekhachahang = new System.Windows.Forms.Button();
+            this.btn_editkhachhang = new System.Windows.Forms.Button();
+            this.btn_addkhachhang = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.thôngTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -233,8 +251,6 @@
             this.doanhSốToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.KháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label55 = new System.Windows.Forms.Label();
-            this.txt_checkbaohanh = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.page_ban_xe.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -273,6 +289,9 @@
             this.Page_Hoadon.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datag_hoadon)).BeginInit();
+            this.Page_khachhang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_khachhang)).BeginInit();
+            this.panel8.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -283,6 +302,7 @@
             this.tabControl1.Controls.Add(this.page_BH);
             this.tabControl1.Controls.Add(this.page_NCC);
             this.tabControl1.Controls.Add(this.Page_Hoadon);
+            this.tabControl1.Controls.Add(this.Page_khachhang);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ImageList = this.imageList1;
@@ -2049,6 +2069,27 @@
             this.panel5.Size = new System.Drawing.Size(1709, 364);
             this.panel5.TabIndex = 1;
             // 
+            // txt_checkbaohanh
+            // 
+            this.txt_checkbaohanh.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txt_checkbaohanh.Location = new System.Drawing.Point(1251, 302);
+            this.txt_checkbaohanh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_checkbaohanh.Name = "txt_checkbaohanh";
+            this.txt_checkbaohanh.Size = new System.Drawing.Size(177, 31);
+            this.txt_checkbaohanh.TabIndex = 62;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label55.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(1105, 302);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(110, 25);
+            this.label55.TabIndex = 61;
+            this.label55.Text = "Mã hóa đơn";
+            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // combobox_baohanh
             // 
             this.combobox_baohanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -2540,6 +2581,194 @@
             this.datag_hoadon.TabIndex = 4;
             this.datag_hoadon.Visible = false;
             // 
+            // Page_khachhang
+            // 
+            this.Page_khachhang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Page_khachhang.Controls.Add(this.dataGridView_khachhang);
+            this.Page_khachhang.Controls.Add(this.panel8);
+            this.Page_khachhang.ImageIndex = 5;
+            this.Page_khachhang.Location = new System.Drawing.Point(4, 27);
+            this.Page_khachhang.Name = "Page_khachhang";
+            this.Page_khachhang.Padding = new System.Windows.Forms.Padding(3);
+            this.Page_khachhang.Size = new System.Drawing.Size(1715, 788);
+            this.Page_khachhang.TabIndex = 5;
+            this.Page_khachhang.Text = "Khách hàng";
+            // 
+            // dataGridView_khachhang
+            // 
+            this.dataGridView_khachhang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_khachhang.Location = new System.Drawing.Point(0, 379);
+            this.dataGridView_khachhang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView_khachhang.Name = "dataGridView_khachhang";
+            this.dataGridView_khachhang.RowHeadersWidth = 51;
+            this.dataGridView_khachhang.RowTemplate.Height = 24;
+            this.dataGridView_khachhang.Size = new System.Drawing.Size(1709, 402);
+            this.dataGridView_khachhang.TabIndex = 6;
+            this.dataGridView_khachhang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_khachhang_CellClick);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel8.Controls.Add(this.btn_lammoikhachhang);
+            this.panel8.Controls.Add(this.txt_sotienchi);
+            this.panel8.Controls.Add(this.txt_tenkhachhang);
+            this.panel8.Controls.Add(this.label66);
+            this.panel8.Controls.Add(this.txt_sdtkhachhang);
+            this.panel8.Controls.Add(this.label68);
+            this.panel8.Controls.Add(this.label69);
+            this.panel8.Controls.Add(this.label70);
+            this.panel8.Controls.Add(this.txt_makhachhang);
+            this.panel8.Controls.Add(this.btn_searchkhachhang);
+            this.panel8.Controls.Add(this.btn_deletekhachahang);
+            this.panel8.Controls.Add(this.btn_editkhachhang);
+            this.panel8.Controls.Add(this.btn_addkhachhang);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(3, 3);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1709, 364);
+            this.panel8.TabIndex = 5;
+            // 
+            // btn_lammoikhachhang
+            // 
+            this.btn_lammoikhachhang.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_lammoikhachhang.Location = new System.Drawing.Point(389, 283);
+            this.btn_lammoikhachhang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_lammoikhachhang.Name = "btn_lammoikhachhang";
+            this.btn_lammoikhachhang.Size = new System.Drawing.Size(121, 50);
+            this.btn_lammoikhachhang.TabIndex = 56;
+            this.btn_lammoikhachhang.Text = "làm mới";
+            this.btn_lammoikhachhang.UseVisualStyleBackColor = true;
+            this.btn_lammoikhachhang.Click += new System.EventHandler(this.btn_lammoikhachhang_Click);
+            // 
+            // txt_sotienchi
+            // 
+            this.txt_sotienchi.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_sotienchi.Location = new System.Drawing.Point(1055, 138);
+            this.txt_sotienchi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_sotienchi.Name = "txt_sotienchi";
+            this.txt_sotienchi.Size = new System.Drawing.Size(177, 31);
+            this.txt_sotienchi.TabIndex = 50;
+            // 
+            // txt_tenkhachhang
+            // 
+            this.txt_tenkhachhang.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txt_tenkhachhang.Location = new System.Drawing.Point(1055, 34);
+            this.txt_tenkhachhang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_tenkhachhang.Name = "txt_tenkhachhang";
+            this.txt_tenkhachhang.Size = new System.Drawing.Size(177, 31);
+            this.txt_tenkhachhang.TabIndex = 49;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label66.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.Location = new System.Drawing.Point(917, 41);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(43, 25);
+            this.label66.TabIndex = 48;
+            this.label66.Text = "Tên";
+            // 
+            // txt_sdtkhachhang
+            // 
+            this.txt_sdtkhachhang.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_sdtkhachhang.Location = new System.Drawing.Point(541, 138);
+            this.txt_sdtkhachhang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_sdtkhachhang.Name = "txt_sdtkhachhang";
+            this.txt_sdtkhachhang.Size = new System.Drawing.Size(177, 31);
+            this.txt_sdtkhachhang.TabIndex = 47;
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label68.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.Location = new System.Drawing.Point(917, 144);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(113, 25);
+            this.label68.TabIndex = 43;
+            this.label68.Text = "Sô tiền chi ";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label69.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Location = new System.Drawing.Point(395, 144);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(133, 25);
+            this.label69.TabIndex = 26;
+            this.label69.Text = "Số điện thoại";
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label70.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.Location = new System.Drawing.Point(395, 41);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(134, 25);
+            this.label70.TabIndex = 25;
+            this.label70.Text = "Mã khách hàng";
+            // 
+            // txt_makhachhang
+            // 
+            this.txt_makhachhang.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txt_makhachhang.Location = new System.Drawing.Point(541, 34);
+            this.txt_makhachhang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_makhachhang.Name = "txt_makhachhang";
+            this.txt_makhachhang.Size = new System.Drawing.Size(177, 31);
+            this.txt_makhachhang.TabIndex = 23;
+            // 
+            // btn_searchkhachhang
+            // 
+            this.btn_searchkhachhang.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_searchkhachhang.Location = new System.Drawing.Point(1465, 283);
+            this.btn_searchkhachhang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_searchkhachhang.Name = "btn_searchkhachhang";
+            this.btn_searchkhachhang.Size = new System.Drawing.Size(121, 50);
+            this.btn_searchkhachhang.TabIndex = 10;
+            this.btn_searchkhachhang.Text = "Tìm kiếm";
+            this.btn_searchkhachhang.UseVisualStyleBackColor = true;
+            this.btn_searchkhachhang.Click += new System.EventHandler(this.btn_searchkhachhang_Click);
+            // 
+            // btn_deletekhachahang
+            // 
+            this.btn_deletekhachahang.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deletekhachahang.Location = new System.Drawing.Point(1465, 206);
+            this.btn_deletekhachahang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_deletekhachahang.Name = "btn_deletekhachahang";
+            this.btn_deletekhachahang.Size = new System.Drawing.Size(121, 50);
+            this.btn_deletekhachahang.TabIndex = 9;
+            this.btn_deletekhachahang.Text = "Xóa";
+            this.btn_deletekhachahang.UseVisualStyleBackColor = true;
+            this.btn_deletekhachahang.Click += new System.EventHandler(this.btn_deletekhachahang_Click);
+            // 
+            // btn_editkhachhang
+            // 
+            this.btn_editkhachhang.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editkhachhang.Location = new System.Drawing.Point(1465, 105);
+            this.btn_editkhachhang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_editkhachhang.Name = "btn_editkhachhang";
+            this.btn_editkhachhang.Size = new System.Drawing.Size(121, 50);
+            this.btn_editkhachhang.TabIndex = 8;
+            this.btn_editkhachhang.Text = "Sữa";
+            this.btn_editkhachhang.UseVisualStyleBackColor = true;
+            this.btn_editkhachhang.Click += new System.EventHandler(this.btn_editkhachhang_Click);
+            // 
+            // btn_addkhachhang
+            // 
+            this.btn_addkhachhang.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addkhachhang.Location = new System.Drawing.Point(1465, 16);
+            this.btn_addkhachhang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_addkhachhang.Name = "btn_addkhachhang";
+            this.btn_addkhachhang.Size = new System.Drawing.Size(121, 50);
+            this.btn_addkhachhang.TabIndex = 7;
+            this.btn_addkhachhang.Text = "Thêm";
+            this.btn_addkhachhang.UseVisualStyleBackColor = true;
+            this.btn_addkhachhang.Click += new System.EventHandler(this.btn_addkhachhang_Click);
+            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -2549,6 +2778,7 @@
             this.imageList1.Images.SetKeyName(2, "baohanh.png");
             this.imageList1.Images.SetKeyName(3, "nhacungcap.png");
             this.imageList1.Images.SetKeyName(4, "bill (1).png");
+            this.imageList1.Images.SetKeyName(5, "anhkhachhang.jpg");
             // 
             // menuStrip1
             // 
@@ -2613,27 +2843,6 @@
             this.KháchHàngToolStripMenuItem.Name = "KháchHàngToolStripMenuItem";
             this.KháchHàngToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
             this.KháchHàngToolStripMenuItem.Text = " khách hàng";
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label55.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(1105, 302);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(110, 25);
-            this.label55.TabIndex = 61;
-            this.label55.Text = "Mã hóa đơn";
-            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txt_checkbaohanh
-            // 
-            this.txt_checkbaohanh.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txt_checkbaohanh.Location = new System.Drawing.Point(1251, 302);
-            this.txt_checkbaohanh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_checkbaohanh.Name = "txt_checkbaohanh";
-            this.txt_checkbaohanh.Size = new System.Drawing.Size(177, 31);
-            this.txt_checkbaohanh.TabIndex = 62;
             // 
             // CuaHang
             // 
@@ -2708,6 +2917,10 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datag_hoadon)).EndInit();
+            this.Page_khachhang.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_khachhang)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -2922,5 +3135,21 @@
         private System.Windows.Forms.ComboBox combox_mahoadon;
         private System.Windows.Forms.TextBox txt_checkbaohanh;
         private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.TabPage Page_khachhang;
+        private System.Windows.Forms.DataGridView dataGridView_khachhang;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button btn_lammoikhachhang;
+        private System.Windows.Forms.TextBox txt_sotienchi;
+        private System.Windows.Forms.TextBox txt_tenkhachhang;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.TextBox txt_sdtkhachhang;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.TextBox txt_makhachhang;
+        private System.Windows.Forms.Button btn_searchkhachhang;
+        private System.Windows.Forms.Button btn_deletekhachahang;
+        private System.Windows.Forms.Button btn_editkhachhang;
+        private System.Windows.Forms.Button btn_addkhachhang;
     }
 }

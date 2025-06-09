@@ -390,3 +390,78 @@ begin
 	from HOADON hd
 	where trim(hd.MAHD)=trim(@mahd)
 end
+
+
+
+create procedure laydanhsachkhachhang
+as
+
+begin
+
+
+	select kh.MAKH N'Mã khách hàng',kh.TENKH N'Tên khách hàng',kh.SDTKH N'Số điện thoại', kh.SOTIENCHI N'Số tiền chi'
+	from KHACHHANG kh
+
+end
+
+create procedure timkiemmakhachhang(@makh char(10))
+as begin
+select kh.MAKH N'Mã khách hàng'
+	from KHACHHANG kh
+	where trim(kh.MAKH)=trim(@makh)
+end
+CREATE PROCEDURE timkiemsdtkhachhang
+    @makh CHAR(10),
+    @sdt VARCHAR(10)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT kh.SDTKH AS N'Số điện thoại'
+    FROM KHACHHANG kh
+    WHERE LTRIM(RTRIM(kh.MAKH)) != LTRIM(RTRIM(@makh))
+      AND LTRIM(RTRIM(kh.SDTKH)) = LTRIM(RTRIM(@sdt))
+END
+create procedure themkhachhang(@makh char(10),@tenkh varchar(50),@sdt varchar(10),@sotienchi int)
+as 
+begin
+
+	insert into KHACHHANG (MAKH,TENKH,SDTKH,SOTIENCHI) values (@makh,@tenkh,@sdt,@sotienchi)
+
+end
+
+create procedure suakhachhang(@makh char(10),@tenkh varchar(50),@sdt varchar(10),@sotienchi int)
+as 
+begin
+
+ update KHACHHANG
+ set TENKH=@tenkh,SDTKH=@sdt,SOTIENCHI=@sotienchi
+ where trim(MAKH)=trim(@makh)
+end
+
+
+create procedure xoakhachhang(@makh char (10))as
+begin
+
+	delete from KHACHHANG
+	where trim(@makh)=trim(MAKH)
+end
+  drop PROCEDURE laydanhsachtimkiemkhachhang 
+  laydanhsachtimkiemkhachhang  '001','',''
+CREATE PROCEDURE laydanhsachtimkiemkhachhang (
+    @makh CHAR(10) = NULL,
+    @tenkh NVARCHAR(50) = NULL,
+    @sdt VARCHAR(10) = NULL
+)
+AS
+BEGIN
+    SELECT 
+        kh.MAKH AS N'Mã khách hàng',
+        kh.TENKH AS N'Tên khách hàng',
+        kh.SDTKH AS N'Số điện thoại',
+        kh.SOTIENCHI AS N'Số tiền chi'
+    FROM KHACHHANG kh
+    WHERE (@makh IS NULL OR LTRIM(RTRIM(kh.MAKH)) LIKE '%' + LTRIM(RTRIM(@makh)) + '%')
+      AND (@tenkh IS NULL OR LTRIM(RTRIM(kh.TENKH)) LIKE '%' + LTRIM(RTRIM(@tenkh)) + '%')
+      AND (@sdt IS NULL OR LTRIM(RTRIM(kh.SDTKH)) LIKE '%' + LTRIM(RTRIM(@sdt)) + '%')
+END
