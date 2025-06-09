@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>347, 17</value>
-  </metadata>
   <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>483, 17</value>
   </metadata>
@@ -128,7 +125,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACu
-        DQAAAk1TRnQBSQFMAgEBBgEAAWABAAFgAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBgEAAWgBAAFoAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -166,7 +163,7 @@
         AfMBDgEAAQ4B8wHxAQ8CAAEPAfEB8wEOAQABDgHzIAAB/wEHAf8BBwH0AfMB/wLzAfIC/wHyAf8BBwH/
         AfADAAHwAesEAAHrAfADAAHwIAAB/wEHAf8CBwHvAgcB8wHxAv8B7QH0AQcC/wFtAQ4BbQH/ARMEAAET
         Af8BbQEOAW0B/yAAAf8BBwH/AgcB7QIHAfQB8gEAAfMB7QH/AQcG/wGSBAABkgX/IAAB/wEHAf8BBwb/
-        AgAB/wEAAQcH/wH4Ag4B+Ab/IQAB7wGSAe0KBwHvAQAQ/yYAAewBEwHqAf8CAAH3ARMBEgH0EAAQ/wUA
+        AgAB/wEAAQcH/wHsAg4B7Ab/IQAB7wGSAe0KBwHvAQAQ/yYAAewBEwHqAf8CAAH3ARMBEgH0EAAQ/wUA
         AfEB7wH/BAAB8wHvAfMGAAH/ARIB/wEHAW0BAAH/ARMB/wHyARIQAAb/Ae0DAAHyBf8EAAH3Ae0B8wHs
         A+8B7QHsAf8B6wHtBQAB8gHrAQAB/wETAQAB/wETAQAB/wETAgABCQEHBwAB9AGSAf8CAAX/AQ4BAAP/
         AQABEgT/AZIB7wHsAe8B9wHzAQcB/wIAAf8BBwH0AQcB/wHvBQAB/wETAZIB6gG8Av8BEwHtAesB7QEA
@@ -189,6 +186,12 @@
         AgABgAGHAQcD/wIAAeABHwGPA/8CAAH4AX8L
 </value>
   </data>
+  <metadata name="menuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>347, 17</value>
+  </metadata>
+  <metadata name="menuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>347, 17</value>
+  </metadata>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
