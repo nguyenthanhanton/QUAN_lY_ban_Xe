@@ -887,6 +887,28 @@ namespace DAI_LY_BAN_Xe
             }
         }
 
+        public void nhaplaixemay (string maxe ,int soluong)
+        {
+
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("[dbo].[nhalaixemay]", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    // Thêm tham số cho stored procedure
+                    cmd.Parameters.AddWithValue("@maxe", maxe);
+                    cmd.Parameters.AddWithValue("@sl", soluong);
+                    
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi: " + ex.Message);
+            }
+        }
+
         public void dongketnoi()
         {
             conn.Close();

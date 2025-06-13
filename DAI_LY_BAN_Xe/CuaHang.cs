@@ -31,6 +31,7 @@ namespace DAI_LY_BAN_Xe
             manv = SQLcode.laymanhanvientutaikhoan(a);
             lammoithongtinbanxe();
             this.Size = new Size(1742, 930);
+            
         }
 
         int tongtien = 0;
@@ -57,8 +58,10 @@ namespace DAI_LY_BAN_Xe
         {
             comboBox_maxeban.DataSource = SQLcode.Laymaxemay();
             comboBox_maxeban.DisplayMember = "Mã xe";
+            label45.Hide();
+            comboBox_maxenhaplai.Hide();
 
-            
+
             datag_baohanh.Visible = false;
             dataGridView_khachhang.Visible = false;
             data_xemay.Visible = false;
@@ -325,7 +328,24 @@ namespace DAI_LY_BAN_Xe
                 load(datag_hoadon, dt);
             }
         }
+        private void datag_hoadon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = datag_hoadon.Rows[e.RowIndex];
 
+                
+                try
+                {
+                    combox_mahoadon.Text= row.Cells["Mã hóa đơn"].Value?.ToString();
+                   
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi hiển thị thông tin nhà cung cấp: " + ex.Message);
+                }
+            }
+        }
         private void btn_timkiemhoadon_Click(object sender, EventArgs e)
         {
             DateTime dto = datapc_ngaylamhd.Value;
@@ -777,8 +797,147 @@ namespace DAI_LY_BAN_Xe
         byte[][] b = new byte[50][];
         int chiso = 0;           // Tổng số đơn hiện có
         int chisotrolai = 0;    // Chỉ số đơn đang hiển thị (-1 nếu chưa có đơn nào)
-
+        string []maxenhaplai = new string[50];
         // Nút chọn ảnh
+        private void checkBox_nhaplai_CheckedChanged(object sender, EventArgs e)
+        {
+            if( checkBox_nhaplai.Checked)
+            {
+                label45.Show();
+                comboBox_maxenhaplai.Show();
+                comboBox_maxenhaplai.DataSource = SQLcode.Laymaxemay();
+                comboBox_maxenhaplai.DisplayMember = "Mã xe";
+                txt_tenxe.ReadOnly = true;
+                txt_xuatxu.ReadOnly = true;
+                cb_tinhtrang.Enabled = false;
+                txt_nxx.ReadOnly = true;
+                nmb_slnhap.Value = 0;
+                tongtien = 0;
+                txt_tongtiennhap.Text = tongtien.ToString();
+
+                chiso = 0;
+                chisotrolai = 0;
+               
+                for (int i = 0; i < nhaphang.GetLength(0); i++)
+                {
+                    for (int j = 0; j < nhaphang.GetLength(1); j++)
+                    {
+                        nhaphang[i, j] = "";
+                    }
+                }
+                for (int i = 0; i < soluongnhap.Length; i++)
+                {
+                    soluongnhap[i] = 0;
+                }
+                for (int i = 0; i < b.Length; i++)
+                {
+                    b[i] = null;
+                }
+            }
+            else
+                {
+                tongtien = 0;
+                txt_tongtiennhap.Text = tongtien.ToString();
+
+                chiso = 0;
+                chisotrolai = 0;
+                for (int i = 0; i < nhaphang.GetLength(0); i++)
+                {
+                    for (int j = 0; j < nhaphang.GetLength(1); j++)
+                    {
+                        nhaphang[i, j] = "";
+                    }
+                }
+                for (int i = 0; i < soluongnhap.Length; i++)
+                {
+                    soluongnhap[i] = 0;
+                }
+                for (int i = 0; i < b.Length; i++)
+                {
+                    b[i] = null;
+                }
+                for (int i = 0; i < maxenhaplai.Length; i++)
+                {
+                    maxenhaplai[i] = "";   
+                }
+                label45.Hide();
+                comboBox_maxenhaplai.Hide();
+                txt_tenxe.ReadOnly = false;
+                txt_xuatxu.ReadOnly = false;
+                cb_tinhtrang.Enabled = true;
+                txt_nxx.ReadOnly = false;
+                txt_tenxe.Text = "";
+                txt_hangxe.Text = "";
+                txt_nxx.Text = "";
+                cb_tinhtrang.Text = "";
+                txt_nxx.Text = "";
+                txt_xuatxu.Text= "";
+                p_nhap.Image = null;
+            }
+            }
+        private void datag_xemxemay_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (checkBox_nhaplai.Checked)
+            {
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = datag_xemxemay.Rows[e.RowIndex];
+
+                    comboBox_maxenhaplai.Text = row.Cells["Mã xe"].Value.ToString();
+                    txt_tenxe.Text = row.Cells["Tên xe"].Value.ToString();
+
+                    //txt_hangxe.Text = row.Cells["Hãng sản xuất"].Value.ToString();
+                    txt_nxx.Text = row.Cells["Năm sản xuất"].Value.ToString();
+
+                    cb_tinhtrang.Text = row.Cells["Tình trạng"].Value.ToString();
+                    txt_xuatxu.Text = row.Cells["Nguồn gốc"].Value.ToString();
+                    
+
+                    // Nếu ảnh là byte[] thì convert sang Image
+                    if (row.Cells["ANH"].Value != DBNull.Value)
+                    {
+                        byte[] imgBytes = (byte[])row.Cells["ANH"].Value;
+                        using (MemoryStream ms = new MemoryStream(imgBytes))
+                        {
+                            p_nhap.Image = Image.FromStream(ms);
+                        }
+                    }
+                    else
+                    {
+                        p_nhap.Image = null;
+                    }
+                }
+            }
+        }
+        private void comboBox_maxenhaplai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dt = SQLcode.laythongtinxeban(comboBox_maxenhaplai.Text.Trim());
+
+            if (dt.Rows.Count > 0)
+            {
+                DataRow row = dt.Rows[0];
+
+                txt_tenxe.Text = row["TENXE"].ToString();
+                //txt_hangxe.Text = row["HANGSX"].ToString();
+                txt_nxx.Text = row["NAMSX"].ToString();
+                cb_tinhtrang.Text = row["TINHTRANG"].ToString();
+                txt_xuatxu.Text = row["NGUONGOC"].ToString();
+                if (row["ANH"] != DBNull.Value)
+                {
+                    byte[] imgBytes = (byte[])row["ANH"];
+                    using (MemoryStream ms = new MemoryStream(imgBytes))
+                    {
+                        p_nhap.Image = Image.FromStream(ms);
+                    }
+                }
+                else
+                {
+                    p_nhap.Image = null;
+                }
+
+
+            }
+        }
         private void p_nhap_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -788,6 +947,7 @@ namespace DAI_LY_BAN_Xe
                 
             }
         }
+
 
         // Convert hình sang mảng byte
         byte[] hinhanhnhap(Image img)
@@ -819,6 +979,10 @@ namespace DAI_LY_BAN_Xe
                 chisotrolai--;
 
                 LoadData(chisotrolai);
+                if (checkBox_nhaplai.Checked)
+                {
+                    comboBox_maxenhaplai.Text = maxenhaplai[chisotrolai];
+                }
             }
 
             else
@@ -834,9 +998,14 @@ namespace DAI_LY_BAN_Xe
             {
                 chisotrolai++;
                 LoadData(chisotrolai);
+                if (checkBox_nhaplai.Checked)
+                {
+                    comboBox_maxenhaplai.Text = maxenhaplai[chisotrolai];
+                }
                 if (chisotrolai == chiso)
                 {
                     ClearInputs();
+                    comboBox_maxenhaplai.Text = "";
                 }
             }
             else
@@ -854,6 +1023,15 @@ namespace DAI_LY_BAN_Xe
                 {
                     MessageBox.Show("Danh sách đã đầy", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
+                }
+                if (nmb_slnhap.Value == 0)
+                {
+                    MessageBox.Show("Số lượng nhập không được bằng 0", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (checkBox_nhaplai.Checked)
+                {
+                    maxenhaplai[chiso] = comboBox_maxenhaplai.Text.Trim();
                 }
                 nhaphang[chiso, 1] = txt_tenxe.Text;
                 nhaphang[chiso, 2] = txt_xuatxu.Text;
@@ -938,13 +1116,21 @@ namespace DAI_LY_BAN_Xe
         }
         private void btn_nhapxe_Click(object sender, EventArgs e)
         {
-
+            if (nmb_slnhap.Value == 0)
+            {
+                MessageBox.Show("Số lượng nhập không được bằng 0", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             nhaphang[chiso, 1] = txt_tenxe.Text;
             nhaphang[chiso, 2] = txt_xuatxu.Text;
             nhaphang[chiso, 3] = cb_tinhtrang.Text;
             nhaphang[chiso, 4] = txt_nxx.Text;
             nhaphang[chiso, 5] = txt_dongia.Text;
             soluongnhap[chiso] = nmb_slnhap.Value;
+            if (checkBox_nhaplai.Checked)
+            {
+                maxenhaplai[chiso] = comboBox_maxenhaplai.Text.Trim();
+            }
             int dongia = int.Parse(txt_dongia.Text);
             tongtien = tongtien + dongia * (int)nmb_slnhap.Value;
             txt_tongtiennhap.Text = tongtien.ToString();
@@ -973,35 +1159,51 @@ namespace DAI_LY_BAN_Xe
             DialogResult result = MessageBox.Show("Bạn có muốn nhập hàng hành không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                if (checkBox_nhaplai.Checked) {
+                    string mahoadon = SQLcode.laymahoadonlonnhat();
+                    mahoadon = TangMaTuDong(mahoadon);
+                    DateTime ngay = DateTime.Now;
+                    string nhacc = SQLcode.laymanhacungcap(txt_hangxe.Text.Trim());
+                    SQLcode.taohoadonnhap(mahoadon, ngay, tongtien, manv, nhacc);
+                    for (int i = 0; i <= chiso; i++)
+                    {
+                        string maxe=maxenhaplai[i];
+                        decimal sl = soluongnhap[i];
+                        int dongianhap = int.Parse(nhaphang[i, 5]);
+                        SQLcode.taoctnhap(mahoadon, maxe, (int)sl, dongianhap);
+                        MessageBox.Show(mahoadon + " " + maxe + " " + dongianhap + " " + sl);
+                        SQLcode.nhaplaixemay(maxe, (int)sl);
+                    }
+                    for (int i = 0; i < maxenhaplai.Length; i++)
+                    {
+                        maxenhaplai[i] = "";
+                    }
 
-                string mahoadon = SQLcode.laymahoadonlonnhat();
-                mahoadon = TangMaTuDong(mahoadon);
-                string maxe = SQLcode.laymaxemaylonnhat();
-                maxe = TangMaTuDong(maxe);
-                DateTime ngay = DateTime.Now;
-                string nhacc = SQLcode.laymanhacungcap(txt_hangxe.Text.Trim());
-                SQLcode.taohoadonnhap(mahoadon, ngay, tongtien, manv, nhacc);
-                for (int i = 0; i <= chiso; i++)
+                }
+                else
                 {
-
-                    //nhaphang[chiso, 1] = txt_tenxe.Text;
-                    //nhaphang[chiso, 2] = txt_xuatxu.Text;
-                    //nhaphang[chiso, 3] = cb_tinhtrang.Text;
-                    //nhaphang[chiso, 4] = txt_nxx.Text;
-                    //nhaphang[chiso, 5] = txt_dongia.Text;
-                    //soluongnhap[chiso] = nmb_slnhap.Value;
-                    string tenxe = nhaphang[i, 1];
-                    string namsx = nhaphang[i, 4];
-                    string tinhtrang = nhaphang[i, 3];
-                    string nguongoc = nhaphang[i, 2];
-                    byte[] hinhanh = b[i];
-                    decimal sl = soluongnhap[i];
-                    SQLcode.taoxemay(maxe, tenxe, txt_hangxe.Text.Trim(), namsx, tinhtrang, nguongoc, hinhanh, (int)sl);
-
-                    int dongianhap = int.Parse(nhaphang[i, 5]);
-                    MessageBox.Show(mahoadon + " " + maxe + " " + dongianhap + " " + sl);
-                    SQLcode.taoctnhap(mahoadon, maxe, (int)sl, dongianhap);
+                    string mahoadon = SQLcode.laymahoadonlonnhat();
+                    mahoadon = TangMaTuDong(mahoadon);
+                    string maxe = SQLcode.laymaxemaylonnhat();
                     maxe = TangMaTuDong(maxe);
+                    DateTime ngay = DateTime.Now;
+                    string nhacc = SQLcode.laymanhacungcap(txt_hangxe.Text.Trim());
+                    SQLcode.taohoadonnhap(mahoadon, ngay, tongtien, manv, nhacc);
+                    for (int i = 0; i <= chiso; i++)
+                    {
+                        string tenxe = nhaphang[i, 1];
+                        string namsx = nhaphang[i, 4];
+                        string tinhtrang = nhaphang[i, 3];
+                        string nguongoc = nhaphang[i, 2];
+                        byte[] hinhanh = b[i];
+                        decimal sl = soluongnhap[i];
+                        SQLcode.taoxemay(maxe, tenxe, txt_hangxe.Text.Trim(), namsx, tinhtrang, nguongoc, hinhanh, (int)sl);
+
+                        int dongianhap = int.Parse(nhaphang[i, 5]);
+                        MessageBox.Show(mahoadon + " " + maxe + " " + dongianhap + " " + sl);
+                        SQLcode.taoctnhap(mahoadon, maxe, (int)sl, dongianhap);
+                        maxe = TangMaTuDong(maxe);
+                    }
                 }
                 MessageBox.Show("Nhập Hàng Thành Công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tongtien = 0;
@@ -1423,6 +1625,18 @@ namespace DAI_LY_BAN_Xe
                 txt_nguongocxemay.Text = row["NGUONGOC"].ToString();
                 txt_giabanxemay.Text = row["GIABAN"].ToString();
                 txt_soluongxemay.Text = row["SOLUONG"].ToString();
+                if (row["ANH"] != DBNull.Value)
+                {
+                    byte[] imgBytes = (byte[])row["ANH"];
+                    using (MemoryStream ms = new MemoryStream(imgBytes))
+                    {
+                        pictureb_xemay.Image = Image.FromStream(ms);
+                    }
+                }
+                else
+                {
+                    pictureb_xemay.Image = null;
+                }
             }
 
 
@@ -1726,6 +1940,15 @@ namespace DAI_LY_BAN_Xe
             comboBox_maxeban.Text = l_daban8.Text.Trim();
             comboBox_maxeban_SelectedIndexChanged(this, EventArgs.Empty);
         }
+
+       
+
+
+
+
+
+
+
 
 
 
