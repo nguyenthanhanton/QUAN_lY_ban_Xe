@@ -785,7 +785,7 @@ namespace DAI_LY_BAN_Xe
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 p_nhap.Image = Image.FromFile(openFileDialog.FileName);
-                this.Text = openFileDialog.FileName;
+                
             }
         }
 
@@ -1401,7 +1401,7 @@ namespace DAI_LY_BAN_Xe
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 pictureb_xemay.Image = Image.FromFile(openFileDialog.FileName);
-                this.Text = openFileDialog.FileName;
+                
             }
         }
 

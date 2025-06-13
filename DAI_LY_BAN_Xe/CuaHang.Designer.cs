@@ -330,11 +330,11 @@
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ImageList = this.imageList1;
-            this.tabControl1.Location = new System.Drawing.Point(0, 28);
+            this.tabControl1.Location = new System.Drawing.Point(0, 30);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1723, 819);
+            this.tabControl1.Size = new System.Drawing.Size(1723, 817);
             this.tabControl1.TabIndex = 0;
             // 
             // page_ban_xe
@@ -2827,7 +2827,7 @@
             this.page_xemay.Location = new System.Drawing.Point(4, 27);
             this.page_xemay.Name = "page_xemay";
             this.page_xemay.Padding = new System.Windows.Forms.Padding(3);
-            this.page_xemay.Size = new System.Drawing.Size(1715, 788);
+            this.page_xemay.Size = new System.Drawing.Size(1715, 786);
             this.page_xemay.TabIndex = 6;
             this.page_xemay.Text = "Xe máy";
             // 
@@ -3113,7 +3113,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1723, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1723, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -3123,7 +3123,7 @@
             this.tàiKhoảnToolStripMenuItem,
             this.thoátToolStripMenuItem});
             this.thôngTinToolStripMenuItem.Name = "thôngTinToolStripMenuItem";
-            this.thôngTinToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.thôngTinToolStripMenuItem.Size = new System.Drawing.Size(86, 26);
             this.thôngTinToolStripMenuItem.Text = "Thông tin";
             // 
             // tàiKhoảnToolStripMenuItem
@@ -3145,7 +3145,7 @@
             this.doanhSốToolStripMenuItem,
             this.KháchHàngToolStripMenuItem});
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(84, 26);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
             // doanhSốToolStripMenuItem
@@ -3176,7 +3176,7 @@
             this.MinimizeBox = false;
             this.Name = "CuaHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CuaHang";
+            this.Text = "Ba Anh Em";
             this.Load += new System.EventHandler(this.CuaHang_Load);
             this.tabControl1.ResumeLayout(false);
             this.page_ban_xe.ResumeLayout(false);
