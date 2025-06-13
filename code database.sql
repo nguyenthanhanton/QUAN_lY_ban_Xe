@@ -50,8 +50,13 @@ CREATE TABLE XEMAY (
 	NAMSX VARCHAR(10),
 	TINHTRANG NVARCHAR(50),
 	NGUONGOC NVARCHAR(50),
-	ANH VARBINARY(MAX)
+	ANH image,
+	SOLUONG INT,
+	GIABAN INT
 );
+
+
+
 
 -- Nhập hàng
 CREATE TABLE NHAPHANG (
@@ -298,11 +303,12 @@ begin
 	where NH.NGAYLAP=@ngay
 end
 
-
+drop procedure laymaxemay 
 create procedure laymaxemay 
 as begin
 	select xm.MAXE N'Mã xe'
 	from XEMAY xm
+	where xm.MAXE !='XE000'
 end
 
 create procedure timkiemmaxemay(@maxe char(10))
@@ -442,7 +448,9 @@ end
 
 create procedure xoakhachhang(@makh char (10))as
 begin
-
+	update HOADON
+	set MAKH='KH000'
+	where trim(@makh)=trim(MAKH)
 	delete from KHACHHANG
 	where trim(@makh)=trim(MAKH)
 end
@@ -464,4 +472,168 @@ BEGIN
     WHERE (@makh IS NULL OR LTRIM(RTRIM(kh.MAKH)) LIKE '%' + LTRIM(RTRIM(@makh)) + '%')
       AND (@tenkh IS NULL OR LTRIM(RTRIM(kh.TENKH)) LIKE '%' + LTRIM(RTRIM(@tenkh)) + '%')
       AND (@sdt IS NULL OR LTRIM(RTRIM(kh.SDTKH)) LIKE '%' + LTRIM(RTRIM(@sdt)) + '%')
+END
+
+CREATE PROCEDURE laymanhaphanglonnhat
+AS
+BEGIN
+    SELECT TOP 1 nh.MANHAP
+    FROM NHAPHANG nh
+    ORDER BY nh.MANHAP DESC  -- Nếu muốn mã lớn nhất (nghĩa là mã mới nhất)
+END 
+create procedure laytencacnhacungcap
+as
+begin
+	select TENNCC 
+	from NHACUNGCAP
+end
+
+CREATE PROCEDURE laymaxelonnhat
+AS
+BEGIN
+    SELECT TOP 1 xm.MAXE
+    FROM XEMAY xm
+    ORDER BY xm.MAXE DESC  
+END 
+
+create procedure themxe(
+@maxe varchar(10),
+@tenxe nvarchar(50),
+@hangsx nvarchar(50),
+@namsx varchar(10),
+@tinhtrang nvarchar(50),
+@nguongoc nvarchar(50),
+@anh image,
+@soluong int
+)
+as
+begin
+insert into XEMAY(MAXE,TENXE,HANGSX,NAMSX,TINHTRANG,NGUONGOC,ANH,SOLUONG,GIABAN) values (@maxe,@tenxe,@hangsx,@namsx,@tinhtrang,@nguongoc,@anh,@soluong,0)
+end
+
+create procedure taohoadonnhap(
+@mahd varchar(10),
+@ngaylap date,
+@tongtien int,
+@manv varchar(10),
+@mancc varchar(10)
+)
+as begin
+	insert into NHAPHANG(MANHAP,NGAYNHAP,TONGTIEN,MANV,MANCC) values (@mahd,@ngaylap,@tongtien,@manv,@mancc)
+end
+
+CREATE PROCEDURE taochitietnhap
+    @manhap VARCHAR(10),
+    @maxe VARCHAR(10),
+    @soluong INT,
+    @dongia INT
+AS
+BEGIN
+    INSERT INTO CT_NHAPHANG (MANHAP, MAXE, SOLUONG, DONGIA)
+    VALUES (LTRIM(RTRIM(@manhap)), LTRIM(RTRIM(@maxe)), @soluong, @dongia);
+END
+
+drop procedure taochitietnhap
+
+create procedure laymanhacungcap(
+@ten nvarchar(50))as
+begin
+	select ncc.MANCC
+	from NHACUNGCAP ncc
+	where trim(ncc.TENNCC)=trim(@ten)
+end
+create procedure laymanhanvientutaikhoan(@tendangnhap nvarchar(50))
+as
+begin
+	select tk.Manv
+	from  TAIKHOAN tk
+	where tk.TAIKHOAN =@tendangnhap
+end
+drop procedure layxemay
+create procedure layxemay
+as
+begin
+	select xm.MAXE N'Mã xe',xm.TENXE N'Tên xe',xm.HANGSX N'Hãng sản xuất',xm.NAMSX N'Năm sản xuất',xm.TINHTRANG N'Tình trạng', xm.NGUONGOC N'Nguồn gốc', xm.SOLUONG N'Số lượng',xm.GIABAN N'Giá bán',xm.ANH
+	from XEMAY xm
+	where trim(xm.MAXE)!='XE000'
+end
+
+create procedure laythongtinxeban(
+@maxe varchar(10)
+)as
+begin
+	select xm.TENXE ,xm.HANGSX,xm.NAMSX,xm.TINHTRANG,xm.NGUONGOC,xm.SOLUONG,xm.GIABAN 
+	from XEMAY xm
+	where  trim(xm.MAXE)=trim(@maxe)
+end
+
+
+create procedure laymakhtusdt(@sdt varchar(10))
+as begin
+	select kh.MAKH
+	from KHACHHANG kh
+	where trim(kh.SDTKH)=trim(@sdt)
+end
+create procedure laymahdlonnhat
+as 
+begin
+	select top 1 MAHD
+	from HOADON
+	order by MAHD desc
+end
+
+
+create procedure taohoadonban(
+@mahd varchar(10),
+@ngay date,
+@tongtien int,
+@makh varchar(10),
+@manv varchar(10)
+)as
+begin
+	UPDATE KHACHHANG
+SET SOTIENCHI = ISNULL(SOTIENCHI, 0) + @tongtien
+WHERE TRIM(MAKH) = TRIM(@makh)
+insert into HOADON(MAHD,NGAYLAP,TONGTIEN,MAKH,MANV) values (@mahd,@ngay,@tongtien,@makh,@manv)
+end
+create procedure taoctban(
+@mahd varchar(10),
+@maxe varchar(10),
+@soluong int,
+@dongia int
+)
+as
+begin
+	update XEMAY
+	set SOLUONG=SOLUONG-@soluong
+	where trim(MAXE)=trim(@maxe)
+	insert into CT_HOADON(MAHD,MAXE,SOLUONG,DONGIA) values (@mahd,@maxe,@soluong,@dongia)
+
+
+end
+
+CREATE PROCEDURE suaxemay
+(
+    @maxe VARCHAR(10),
+    @tenxe NVARCHAR(50),
+    @hangxe NVARCHAR(50),
+    @namsx VARCHAR(10),
+    @tinhtrang nVARCHAR(10),
+    @nguongoc VARCHAR(50),
+    @giaxe INT,
+    @anh IMAGE
+)
+AS
+BEGIN
+    -- Cập nhật thông tin trong bảng XEMAY nếu mã xe tồn tại
+    UPDATE XEMAY
+    SET 
+        TENXE     = @tenxe,
+        HANGSX    = @hangxe,
+        NAMSX     = @namsx,
+        TINHTRANG = @tinhtrang,
+        NGUONGOC  = @nguongoc,
+        GIABAN    = @giaxe,
+        ANH       = @anh
+    WHERE LTRIM(RTRIM(MAXE)) = LTRIM(RTRIM(@maxe));
 END
