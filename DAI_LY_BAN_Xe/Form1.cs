@@ -48,23 +48,26 @@ namespace DAI_LY_BAN_Xe
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (trangthai == 1)
-            {   this.Visible = false; // Ẩn form đăng nhập
+            {
+                this.Hide(); // Ẩn form đăng nhập
 
-                CuaHang adminForm = new CuaHang();
+                CuaHang adminForm = new CuaHang(taikhoan);
                 adminForm.ShowDialog();
                 SQLcode.dongketnoi(); // Đóng kết nối sau khi sử dụng
 
             }
             else if (trangthai == 2)
             {
-                this.Visible = false; // Ẩn form đăng nhập
+                this.Hide(); // Ẩn form đăng nhập
                 CuaHang staffForm = new CuaHang();
                 staffForm.ShowDialog();
                 SQLcode.dongketnoi(); // Đóng kết nối sau khi sử dụng
 
             }
-            this.Visible = true; // Hiển thị lại form đăng nhập sau khi đóng form CuaHang
-            SQLcode.taoketnoi(); // Đóng kết nối sau khi sử dụng
+            this.Show();
+            txt_username.Text = "";
+            txt_password.Text = "";
+            SQLcode.taoketnoi();
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -73,6 +76,7 @@ namespace DAI_LY_BAN_Xe
 
             if (result == DialogResult.Yes)
             {
+                SQLcode.dongketnoi();
                 // Thoát chương trình hoặc thực hiện hành động thoát
                 Application.Exit();
             }

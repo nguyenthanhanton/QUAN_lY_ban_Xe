@@ -4,7 +4,10 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DAI_LY_BAN_Xe
 {
@@ -79,13 +82,16 @@ namespace DAI_LY_BAN_Xe
 
         public int xoancc(string a)
         {
-            string query = "DELETE FROM NHACUNGCAP WHERE MANCC = @mancc";
+            string query = @"UPDATE NHAPHANG SET MANCC = 'NCC000' WHERE MANCC = @mancc;DELETE FROM NHACUNGCAP WHERE MANCC = @mancc;";
+
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
                 cmd.Parameters.AddWithValue("@mancc", a);
+
                 if (conn.State == ConnectionState.Closed)
                     conn.Open();
-                return cmd.ExecuteNonQuery(); // Trả về số dòng bị ảnh hưởng
+
+                return cmd.ExecuteNonQuery(); // Trả về tổng số dòng bị ảnh hưởng
             }
         }
         public int suancc(string a, string b, string c, string d)
@@ -172,7 +178,6 @@ namespace DAI_LY_BAN_Xe
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
             }
-
             return dt;
         }
         public DataTable timkiemhoadonnhap(DateTime a)
@@ -538,7 +543,349 @@ namespace DAI_LY_BAN_Xe
 
             return dt;
         }
+        public string laymahoadonlonnhat()
+        {
+            string maLonNhat = "";
+            string query = "laymanhaphanglonnhat"; // tên procedure
 
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        maLonNhat = dt.Rows[0][0].ToString(); // Lấy MANHAP từ dòng đầu tiên, cột đầu tiên
+                    }
+                }
+            }
+
+            return maLonNhat;
+        }
+        public string laymaxemaylonnhat()
+        {
+            string maLonNhat = "";
+            string query = "laymaxelonnhat"; // tên procedure
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        maLonNhat = dt.Rows[0][0].ToString(); // Lấy MANHAP từ dòng đầu tiên, cột đầu tiên
+                    }
+                }
+            }
+
+            return maLonNhat;
+        }
+
+        public ListBox laytencacnhacungcap(ListBox ten)
+        {
+            ten.Items.Clear();
+            string query = "laytencacnhacungcap"; // tên stored procedure
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        ten.Items.Add(reader["TENNCC"].ToString());
+                    }
+                }
+
+         
+            }
+
+            return ten;
+        }
+        public string laymanhacungcap(string a)
+        {
+            string maLonNhat = "";
+            string query = "laymanhacungcap"; // tên procedure
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ten", a);
+
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        maLonNhat = dt.Rows[0][0].ToString(); 
+                    }
+                }
+            }
+
+            return maLonNhat;
+        }
+        public void taohoadonnhap(string manhap,DateTime ngaylap, int tongtien , string manv,string mancc)
+        {
+
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("[dbo].[taohoadonnhap]", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    // Thêm tham số cho stored procedure
+                    cmd.Parameters.AddWithValue("@mahd", manhap);
+                    cmd.Parameters.AddWithValue("@ngaylap", ngaylap);
+                    cmd.Parameters.AddWithValue("@tongtien", tongtien);
+                    cmd.Parameters.AddWithValue("@manv", manv);
+                    cmd.Parameters.AddWithValue("@mancc", mancc);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi: " + ex.Message);
+            }
+        }
+        public void taoxemay(string maxe, string tenxe,string hangsx,string namsx,string tinhtrang,string nguongoc,byte[] anh,int soluong)
+        {
+
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("[dbo].[themxe]", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    // Thêm tham số cho stored procedure
+                    cmd.Parameters.AddWithValue("@maxe", maxe);
+                    cmd.Parameters.AddWithValue("@tenxe", tenxe);
+                    cmd.Parameters.AddWithValue("@hangsx", hangsx);
+                    cmd.Parameters.AddWithValue("@namsx", namsx);
+                    cmd.Parameters.AddWithValue("@tinhtrang", tinhtrang);
+                    cmd.Parameters.AddWithValue("@nguongoc", nguongoc);
+                    cmd.Parameters.AddWithValue("@anh", anh);
+                    cmd.Parameters.AddWithValue("@soluong", soluong);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi: " + ex.Message);
+            }
+        }
+        public void taoctnhap(string manhap ,string maxe, int sl, int dongia)
+        {
+
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("[dbo].[taochitietnhap]", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    // Thêm tham số cho stored procedure
+                    cmd.Parameters.AddWithValue("@manhap", manhap);
+                    cmd.Parameters.AddWithValue("@maxe", maxe);
+                    cmd.Parameters.AddWithValue("@soluong", sl);
+                    cmd.Parameters.AddWithValue("@dongia", dongia);
+                    
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi: " + ex.Message);
+            }
+        }
+        
+
+        public string laymanhanvientutaikhoan(string a)
+        {
+            string maLonNhat = "";
+            string query = "laymanhanvientutaikhoan"; // tên procedure
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@tendangnhap", a);
+
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        maLonNhat = dt.Rows[0][0].ToString();
+                    }
+                }
+            }
+
+            return maLonNhat;
+        }
+        public DataTable layxemay()
+        {
+            DataTable dt = new DataTable();
+            string query = "layxemay"; // tên procedure
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+    
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
+
+        public DataTable laythongtinxeban(string a)
+        {
+            DataTable dt = new DataTable();
+            string query = "laythongtinxeban"; // tên procedure
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maxe", a);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
+        public string laymakhtusdt(string a)
+        {
+            string maLonNhat = "";
+            string query = "laymakhtusdt"; // tên procedure
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@sdt", a);
+
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        maLonNhat = dt.Rows[0][0].ToString();
+                    }
+                }
+            }
+            return maLonNhat;
+
+        }
+        public string laymahoadonbanlonnhat()
+        {
+            string maLonNhat = "";
+            string query = "laymahdlonnhat"; // tên procedure
+
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        maLonNhat = dt.Rows[0][0].ToString(); // Lấy MANHAP từ dòng đầu tiên, cột đầu tiên
+                    }
+                }
+            }
+
+            return maLonNhat;
+        }
+        public void taohoadonban(string mahoadonban,DateTime ngay, int tongtiensaukhigiamgia, string makhban, string manv)
+        {
+           
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("[dbo].[taohoadonban]", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    // Thêm tham số cho stored procedure
+                    cmd.Parameters.AddWithValue("@mahd", mahoadonban);
+                    cmd.Parameters.AddWithValue("@ngay", ngay);
+                    cmd.Parameters.AddWithValue("@tongtien", tongtiensaukhigiamgia);
+                    cmd.Parameters.AddWithValue("@makh", makhban);
+                    cmd.Parameters.AddWithValue("@manv", manv);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi: " + ex.Message);
+            }
+        }
+        public void taoctban(string mahoadonban,  string maxe, int soluong, int giaban)
+        {
+            
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("[dbo].[taoctban]", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    // Thêm tham số cho stored procedure
+                    cmd.Parameters.AddWithValue("@mahd", mahoadonban);
+                    cmd.Parameters.AddWithValue("@maxe", maxe);
+                    cmd.Parameters.AddWithValue("@soluong", soluong);
+                    cmd.Parameters.AddWithValue("@dongia", giaban);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi: " + ex.Message);
+            }
+        }
+        public void suaxemay(string maxe, string tenxe, string hangxe,string namsx,string tinhtrang,string nguongoc,int giaxe, byte[]hinhanh)
+        {
+         
+
+           try
+            {
+                using (SqlCommand cmd = new SqlCommand("[dbo].[suaxemay]", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    // Thêm tham số cho stored procedure
+                    cmd.Parameters.AddWithValue("@maxe", maxe);
+                    cmd.Parameters.AddWithValue("@tenxe", tenxe);
+                    cmd.Parameters.AddWithValue("@hangxe", hangxe);
+                    cmd.Parameters.AddWithValue("@namsx", namsx);
+                    cmd.Parameters.AddWithValue("@tinhtrang", tinhtrang);
+                    cmd.Parameters.AddWithValue("@nguongoc", nguongoc);
+                    cmd.Parameters.AddWithValue("@giaxe", giaxe);
+                    cmd.Parameters.AddWithValue("@anh", hinhanh);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi: " + ex.Message);
+            }
+        }
 
         public void dongketnoi()
         {
