@@ -152,6 +152,9 @@
             this.Page_nhaphang = new System.Windows.Forms.TabPage();
             this.datag_xemxemay = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label79 = new System.Windows.Forms.Label();
+            this.txt_hangxecuaxe = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
             this.comboBox_maxenhaplai = new System.Windows.Forms.ComboBox();
             this.checkBox_nhaplai = new System.Windows.Forms.CheckBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -244,6 +247,7 @@
             this.page_xemay = new System.Windows.Forms.TabPage();
             this.data_xemay = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.label80 = new System.Windows.Forms.Label();
             this.comb_tinhtrangxemay = new System.Windows.Forms.ComboBox();
             this.txt_nguongocxemay = new System.Windows.Forms.TextBox();
             this.txt_namsxxemay = new System.Windows.Forms.TextBox();
@@ -252,8 +256,6 @@
             this.label78 = new System.Windows.Forms.Label();
             this.pictureb_xemay = new System.Windows.Forms.PictureBox();
             this.txt_hangxemay = new System.Windows.Forms.TextBox();
-            this.lb_hangsxxemay = new System.Windows.Forms.ListBox();
-            this.label75 = new System.Windows.Forms.Label();
             this.comboBox_xemay = new System.Windows.Forms.ComboBox();
             this.txt_lammoixemay = new System.Windows.Forms.Button();
             this.txt_giabanxemay = new System.Windows.Forms.TextBox();
@@ -273,7 +275,6 @@
             this.doanhSốToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.KháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label45 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.page_ban_xe.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -1776,6 +1777,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel4.Controls.Add(this.label79);
+            this.panel4.Controls.Add(this.txt_hangxecuaxe);
             this.panel4.Controls.Add(this.label45);
             this.panel4.Controls.Add(this.comboBox_maxenhaplai);
             this.panel4.Controls.Add(this.checkBox_nhaplai);
@@ -1810,6 +1813,37 @@
             this.panel4.Size = new System.Drawing.Size(1688, 382);
             this.panel4.TabIndex = 0;
             // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label79.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.Location = new System.Drawing.Point(303, 325);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(79, 25);
+            this.label79.TabIndex = 66;
+            this.label79.Text = "Hãng xe";
+            // 
+            // txt_hangxecuaxe
+            // 
+            this.txt_hangxecuaxe.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_hangxecuaxe.Location = new System.Drawing.Point(441, 322);
+            this.txt_hangxecuaxe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_hangxecuaxe.Name = "txt_hangxecuaxe";
+            this.txt_hangxecuaxe.Size = new System.Drawing.Size(177, 31);
+            this.txt_hangxecuaxe.TabIndex = 65;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label45.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(1037, 35);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(63, 25);
+            this.label45.TabIndex = 64;
+            this.label45.Text = "Mã xe";
+            // 
             // comboBox_maxenhaplai
             // 
             this.comboBox_maxenhaplai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1835,7 +1869,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(1517, 153);
+            this.button4.Location = new System.Drawing.Point(1517, 123);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(121, 50);
@@ -1893,7 +1927,7 @@
             // btn_lammoixe
             // 
             this.btn_lammoixe.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_lammoixe.Location = new System.Drawing.Point(315, 316);
+            this.btn_lammoixe.Location = new System.Drawing.Point(1517, 224);
             this.btn_lammoixe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_lammoixe.Name = "btn_lammoixe";
             this.btn_lammoixe.Size = new System.Drawing.Size(121, 50);
@@ -1919,7 +1953,7 @@
             this.label57.AutoSize = true;
             this.label57.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label57.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.Location = new System.Drawing.Point(589, 316);
+            this.label57.Location = new System.Drawing.Point(742, 318);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(145, 25);
             this.label57.TabIndex = 46;
@@ -1928,7 +1962,7 @@
             // txt_tongtiennhap
             // 
             this.txt_tongtiennhap.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tongtiennhap.Location = new System.Drawing.Point(747, 313);
+            this.txt_tongtiennhap.Location = new System.Drawing.Point(900, 315);
             this.txt_tongtiennhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_tongtiennhap.Name = "txt_tongtiennhap";
             this.txt_tongtiennhap.ReadOnly = true;
@@ -2058,11 +2092,11 @@
             this.label51.AutoSize = true;
             this.label51.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label51.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(96, 26);
+            this.label51.Location = new System.Drawing.Point(53, 26);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(79, 25);
+            this.label51.Size = new System.Drawing.Size(126, 25);
             this.label51.TabIndex = 27;
-            this.label51.Text = "Hãng xe";
+            this.label51.Text = "Nhà cung cấp";
             // 
             // label52
             // 
@@ -2876,6 +2910,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel9.Controls.Add(this.label80);
             this.panel9.Controls.Add(this.comb_tinhtrangxemay);
             this.panel9.Controls.Add(this.txt_nguongocxemay);
             this.panel9.Controls.Add(this.txt_namsxxemay);
@@ -2884,8 +2919,6 @@
             this.panel9.Controls.Add(this.label78);
             this.panel9.Controls.Add(this.pictureb_xemay);
             this.panel9.Controls.Add(this.txt_hangxemay);
-            this.panel9.Controls.Add(this.lb_hangsxxemay);
-            this.panel9.Controls.Add(this.label75);
             this.panel9.Controls.Add(this.comboBox_xemay);
             this.panel9.Controls.Add(this.txt_lammoixemay);
             this.panel9.Controls.Add(this.txt_giabanxemay);
@@ -2902,6 +2935,17 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1709, 364);
             this.panel9.TabIndex = 6;
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label80.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.Location = new System.Drawing.Point(755, 308);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(79, 25);
+            this.label80.TabIndex = 74;
+            this.label80.Text = "Hãng xe";
             // 
             // comb_tinhtrangxemay
             // 
@@ -2982,37 +3026,11 @@
             // txt_hangxemay
             // 
             this.txt_hangxemay.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txt_hangxemay.Location = new System.Drawing.Point(47, 311);
+            this.txt_hangxemay.Location = new System.Drawing.Point(893, 308);
             this.txt_hangxemay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_hangxemay.Name = "txt_hangxemay";
-            this.txt_hangxemay.ReadOnly = true;
             this.txt_hangxemay.Size = new System.Drawing.Size(177, 31);
             this.txt_hangxemay.TabIndex = 64;
-            // 
-            // lb_hangsxxemay
-            // 
-            this.lb_hangsxxemay.BackColor = System.Drawing.Color.Aquamarine;
-            this.lb_hangsxxemay.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold);
-            this.lb_hangsxxemay.FormattingEnabled = true;
-            this.lb_hangsxxemay.ItemHeight = 25;
-            this.lb_hangsxxemay.Location = new System.Drawing.Point(15, 41);
-            this.lb_hangsxxemay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lb_hangsxxemay.Name = "lb_hangsxxemay";
-            this.lb_hangsxxemay.ScrollAlwaysVisible = true;
-            this.lb_hangsxxemay.Size = new System.Drawing.Size(265, 254);
-            this.lb_hangsxxemay.TabIndex = 63;
-            this.lb_hangsxxemay.SelectedIndexChanged += new System.EventHandler(this.lb_hangsxxemay_SelectedIndexChanged);
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label75.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.Location = new System.Drawing.Point(96, 2);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(79, 25);
-            this.label75.TabIndex = 62;
-            this.label75.Text = "Hãng xe";
             // 
             // comboBox_xemay
             // 
@@ -3189,17 +3207,6 @@
             this.KháchHàngToolStripMenuItem.Name = "KháchHàngToolStripMenuItem";
             this.KháchHàngToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
             this.KháchHàngToolStripMenuItem.Text = " khách hàng";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label45.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(1037, 35);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(63, 25);
-            this.label45.TabIndex = 64;
-            this.label45.Text = "Mã xe";
             // 
             // CuaHang
             // 
@@ -3523,8 +3530,6 @@
         private System.Windows.Forms.ComboBox comboBox_xemay;
         private System.Windows.Forms.PictureBox pictureb_xemay;
         private System.Windows.Forms.TextBox txt_hangxemay;
-        private System.Windows.Forms.ListBox lb_hangsxxemay;
-        private System.Windows.Forms.Label label75;
         private System.Windows.Forms.ComboBox comb_tinhtrangxemay;
         private System.Windows.Forms.TextBox txt_nguongocxemay;
         private System.Windows.Forms.TextBox txt_namsxxemay;
@@ -3534,5 +3539,8 @@
         private System.Windows.Forms.CheckBox checkBox_nhaplai;
         private System.Windows.Forms.ComboBox comboBox_maxenhaplai;
         private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.TextBox txt_hangxecuaxe;
+        private System.Windows.Forms.Label label80;
     }
 }
