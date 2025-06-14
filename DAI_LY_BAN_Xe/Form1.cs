@@ -47,7 +47,7 @@ namespace DAI_LY_BAN_Xe
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (trangthai == 1)
+            else if (trangthai == 1||trangthai == 2)
             {
                 this.Hide(); // Ẩn form đăng nhập
 
@@ -56,14 +56,7 @@ namespace DAI_LY_BAN_Xe
                 SQLcode.dongketnoi(); // Đóng kết nối sau khi sử dụng
 
             }
-            else if (trangthai == 2)
-            {
-                this.Hide(); // Ẩn form đăng nhập
-                CuaHang staffForm = new CuaHang();
-                staffForm.ShowDialog();
-                SQLcode.dongketnoi(); // Đóng kết nối sau khi sử dụng
-
-            }
+           
             this.Show();
             txt_username.Text = "";
             txt_password.Text = "";

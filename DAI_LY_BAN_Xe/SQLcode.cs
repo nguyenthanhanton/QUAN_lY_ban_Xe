@@ -38,7 +38,7 @@ namespace DAI_LY_BAN_Xe
             {
                 string quyen = result.ToString();
                 if (quyen == "admin") return 1;
-                else if (quyen == "staff") return 2;
+                else if (quyen == "nhanvien") return 2;
             }
 
             return 0;

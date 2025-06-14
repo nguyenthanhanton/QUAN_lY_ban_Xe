@@ -1073,8 +1073,11 @@ namespace DAI_LY_BAN_Xe
         {
             if (chisotrolai == chiso && chiso > 0)
             {
+                
                 chiso--;  // Giảm số lượng đơn
                 chisotrolai = chiso;
+                tongtien = tongtien - (int.Parse(nhaphang[chiso, 5]) * (int)soluongnhap[chiso]);
+                txt_tongtiennhap.Text = tongtien.ToString();
 
                 MessageBox.Show("Xóa đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearInputs();
@@ -1126,7 +1129,10 @@ namespace DAI_LY_BAN_Xe
                 MessageBox.Show("Số lượng nhập không được bằng 0", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            nhaphang[chiso, 0] = txt_hangxecuaxe.Text.Trim();
+            DialogResult result = MessageBox.Show("Bạn có muốn nhập hàng hành không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                nhaphang[chiso, 0] = txt_hangxecuaxe.Text.Trim();
             nhaphang[chiso, 1] = txt_tenxe.Text;
             nhaphang[chiso, 2] = txt_xuatxu.Text;
             nhaphang[chiso, 3] = cb_tinhtrang.Text;
@@ -1162,9 +1168,7 @@ namespace DAI_LY_BAN_Xe
                 }
 
             }
-            DialogResult result = MessageBox.Show("Bạn có muốn nhập hàng hành không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
+           
                 if (checkBox_nhaplai.Checked) {
                     string mahoadon = SQLcode.laymahoadonlonnhat();
                     mahoadon = TangMaTuDong(mahoadon);
@@ -1466,7 +1470,10 @@ namespace DAI_LY_BAN_Xe
             }
             else
             {
-                cthoadonbanhang[chisoban, 0] = comboBox_maxeban.Text;
+                DialogResult result = MessageBox.Show("Bạn có muốn nhập bán không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    cthoadonbanhang[chisoban, 0] = comboBox_maxeban.Text;
                 cthoadonbanhang[chisoban, 1] = nud_slban.Value.ToString();
                 cthoadonbanhang[chisoban, 2] = txt_giaxeban.Text;
 
@@ -1497,9 +1504,7 @@ namespace DAI_LY_BAN_Xe
                 txt_tongtienban.Text = tongtienban.ToString();
                 int tongtiensaukhigiamgia = tongtienban / 100 * (100 - phantramgiamgia);
                 MessageBox.Show("Tổng tiền bán là " + txt_tongtienban.Text + " Tổng tiền sau khi giảm giá là" + tongtiensaukhigiamgia);
-                DialogResult result = MessageBox.Show("Bạn có muốn nhập bán không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
+               
 
                     string mahoadonban = SQLcode.laymahoadonbanlonnhat();
                     mahoadonban = TangMaTuDong(mahoadonban);
