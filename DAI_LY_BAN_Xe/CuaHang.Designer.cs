@@ -273,7 +273,6 @@
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doanhSốToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.KháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl1.SuspendLayout();
             this.page_ban_xe.SuspendLayout();
@@ -3190,8 +3189,7 @@
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.doanhSốToolStripMenuItem,
-            this.KháchHàngToolStripMenuItem});
+            this.doanhSốToolStripMenuItem});
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
             this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
@@ -3199,14 +3197,8 @@
             // doanhSốToolStripMenuItem
             // 
             this.doanhSốToolStripMenuItem.Name = "doanhSốToolStripMenuItem";
-            this.doanhSốToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
+            this.doanhSốToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.doanhSốToolStripMenuItem.Text = "Doanh số";
-            // 
-            // KháchHàngToolStripMenuItem
-            // 
-            this.KháchHàngToolStripMenuItem.Name = "KháchHàngToolStripMenuItem";
-            this.KháchHàngToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
-            this.KháchHàngToolStripMenuItem.Text = " khách hàng";
             // 
             // CuaHang
             // 
@@ -3449,7 +3441,6 @@
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem doanhSốToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem KháchHàngToolStripMenuItem;
         private System.Windows.Forms.TabPage Page_Hoadon;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label65;

@@ -47,17 +47,25 @@ namespace DAI_LY_BAN_Xe
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (trangthai == 1||trangthai == 2)
+            else if (trangthai == 1)
             {
                 this.Hide(); // Ẩn form đăng nhập
 
-                CuaHang adminForm = new CuaHang(taikhoan);
+                CuaHang adminForm = new CuaHang(taikhoan,1);
                 adminForm.ShowDialog();
                 SQLcode.dongketnoi(); // Đóng kết nối sau khi sử dụng
 
             }
-           
-            this.Show();
+            else if(  trangthai == 2)
+            {
+                this.Hide(); // Ẩn form đăng nhập
+                CuaHang adminForm = new CuaHang(taikhoan,2);
+                adminForm.ShowDialog();
+                SQLcode.dongketnoi(); // Đóng kết nối sau khi sử dụng
+
+            }
+
+                this.Show();
             txt_username.Text = "";
             txt_password.Text = "";
             SQLcode.taoketnoi();

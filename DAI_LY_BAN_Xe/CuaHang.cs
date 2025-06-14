@@ -24,14 +24,22 @@ namespace DAI_LY_BAN_Xe
             InitializeComponent();
         }
 
-        public CuaHang(string a)
+        public CuaHang(string a,int b)
         {
             InitializeComponent();
             SQLcode.taoketnoi();
             manv = SQLcode.laymanhanvientutaikhoan(a);
             lammoithongtinbanxe();
             this.Size = new Size(1742, 930);
+            ktquyenhan(b);
             
+        }
+        private void ktquyenhan(int b)
+        {
+            if (b == 2)
+            {
+                thốngKêToolStripMenuItem.Visible = false;
+            }
         }
 
         int tongtien = 0;
