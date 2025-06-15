@@ -14,7 +14,8 @@ GO
 CREATE TABLE TAIKHOAN (
 	TAIKHOAN NVARCHAR(50),
 	MATKHAU NVARCHAR(50),
-	QUYENHAN NVARCHAR(50)
+	QUYENHAN NVARCHAR(50),
+	Manv varchar(10)
 );
 
 -- Nhân viên
@@ -637,3 +638,151 @@ BEGIN
         ANH       = @anh
     WHERE LTRIM(RTRIM(MAXE)) = LTRIM(RTRIM(@maxe));
 END
+
+
+DROP PROCEDURE dbo.sp_ThongKeTongQuat
+GO
+Create PROCEDURE dbo.sp_ThongKeTongQuat
+    @TuNgay DATE,
+    @DenNgay DATE
+AS
+BEGIN
+    SELECT
+        hd.MAHD,
+        hd.NGAYLAP,                   -- Thêm ngày l?p
+        nv.TENNV,
+        kh.TENKH,
+        xm.TENXE,
+        xm.HANGSX,
+        xm.NAMSX, 
+        xm.TINHTRANG,
+		ctnh.SOLUONG as SOLUONGNHAP,
+        ctnh.DONGIA AS GiaNhap,
+        cthd.SOLUONG AS SOLUONGBAN,
+        xm.GIABAN  AS GiaBan,
+        SUM(xm.GIABAN * cthd.SOLUONG) AS DaThanhToan
+    FROM HOADON hd
+    JOIN CT_HOADON cthd     ON cthd.MAHD = hd.MAHD
+    JOIN NHANVIEN  nv       ON nv.MANV   = hd.MANV
+    JOIN KHACHHANG kh       ON kh.MAKH   = hd.MAKH
+    JOIN XEMAY     xm       ON xm.MAXE   = cthd.MAXE
+    JOIN CT_NHAPHANG ctnh   ON ctnh.MAXE = xm.MAXE
+   -- WHERE hd.NGAYLAP BETWEEN @TuNgay AND @DenNgay
+    GROUP BY
+        hd.MAHD, hd.NGAYLAP,
+        nv.TENNV, kh.TENKH,
+        xm.TENXE, xm.HANGSX, xm.NAMSX, xm.TINHTRANG,ctnh.SOLUONG,ctnh.DONGIA, cthd.SOLUONG, xm.GIABAN;
+END
+---------------------------------------------------------------
+**--Hãng xe ÐU?C NH?P V? NHI?U NH?T
+drop PROCEDURE sp_TopXeDuocNhapNhieuNhat
+CREATE PROCEDURE sp_TopXeDuocNhapNhieuNhat
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT TOP 1
+           X.HANGSX,
+           SUM(CT.SOLUONG) AS TongNhap
+    FROM   CT_NHAPHANG AS CT
+    JOIN   XEMAY       AS X ON X.MAXE = CT.MAXE
+    GROUP BY
+           X.HANGSX
+    ORDER BY
+           TongNhap DESC;
+END
+ 
+select * from CT_NHAPHANG
+select * from XEMAY
+-------------------------------------------------------------
+-------------------------------------------------------------
+--Khách hàng có s? ti?n chi nhi?u nh?t
+GO
+IF OBJECT_ID('sp_KhachHangChiNhieuNhat', 'P') IS NOT NULL
+    DROP PROCEDURE sp_KhachHangChiNhieuNhat;
+GO
+
+CREATE PROCEDURE sp_KhachHangChiNhieuNhat1
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT TOP 1 WITH TIES
+        kh.MAKH,
+        kh.TENKH,
+        kh.SDTKH,
+       SUM(ct.SOLUONG * xm.GIABAN) AS TongChiTien
+    FROM 
+        HOADON hd
+    JOIN 
+        KHACHHANG kh ON kh.MAKH = hd.MAKH
+    JOIN 
+        CT_HOADON ct ON ct.MAHD = hd.MAHD
+    JOIN 
+        XEMAY xm ON xm.MAXE = ct.MAXE
+    GROUP BY 
+        kh.MAKH, kh.TENKH, kh.SDTKH
+    ORDER BY 
+        TongChiTien DESC;
+END
+GO
+Select hd.MAHD, XEMAY.MAXE, XEMAY.TENXE
+from HOADON hd, KHACHHANG kh, CT_HOADON, XEMAY
+where hd.MAKH = kh.MAKH and hd.MAHD = CT_HOADON.MAHD
+select* from HOADON
+select * from CT_HOADON
+GO
+
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+-- 2. Th?ng kê xe bán ch?y nh?t
+GO
+CREATE PROCEDURE sp_ThongKe_TopXeBanChay
+AS
+BEGIN
+    SELECT TOP 1 X.TENXE, x.HANGSX , SUM(CT.SOLUONG) AS SOLUONGBAN
+    FROM CT_HOADON CT
+    JOIN XEMAY X ON CT.MAXE = X.MAXE
+    GROUP BY X.TENXE, x.HANGSX
+    ORDER BY SOLUONGBAN DESC
+END
+GO
+
+-- 3. Th?ng kê doanh thu theo t?ng xe
+CREATE PROCEDURE sp_ThongKe_DoanhThu_TheoXe
+AS
+BEGIN
+    SELECT X.TENXE, SUM(CT.SOLUONG * CT.DONGIA) AS DOANHTHU
+    FROM CT_HOADON CT
+    JOIN XEMAY X ON CT.MAXE = X.MAXE
+    GROUP BY X.TENXE
+END
+GO
+
+-- 4. Th?ng kê doanh s? theo nhân viên
+CREATE PROCEDURE sp_ThongKe_DoanhThu_TheoNhanVien
+AS
+BEGIN
+   /*--------- Nhân viên có doanh thu cao nh?t ---------*/
+WITH DoanhThuNhanVien AS (
+    SELECT 
+        hd.MANV,
+        SUM(ct.SOLUONG * ct.DONGIA) AS TongDoanhThu
+    FROM HOADON hd
+    JOIN CT_HOADON ct ON hd.MAHD = ct.MAHD
+    GROUP BY hd.MANV
+)
+SELECT 
+    nv.MANV,
+    nv.TENNV,
+    dt.TongDoanhThu
+FROM DoanhThuNhanVien dt
+JOIN NHANVIEN nv ON nv.MANV = dt.MANV
+WHERE dt.TongDoanhThu = (
+    SELECT MAX(TongDoanhThu) FROM DoanhThuNhanVien
+);
+      -- ch? tr? v? nhân viên (ho?c các nhân viên) có doanh thu cao nh?t
+
+END
+GO

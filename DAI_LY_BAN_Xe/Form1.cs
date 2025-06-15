@@ -51,20 +51,21 @@ namespace DAI_LY_BAN_Xe
             {
                 this.Hide(); // Ẩn form đăng nhập
 
-                CuaHang adminForm = new CuaHang(taikhoan);
+                CuaHang adminForm = new CuaHang(taikhoan,1);
                 adminForm.ShowDialog();
-                SQLcode.dongketnoi(); 
+                SQLcode.dongketnoi(); // Đóng kết nối sau khi sử dụng
 
             }
-            else if (trangthai == 2)
+            else if(  trangthai == 2)
             {
                 this.Hide(); // Ẩn form đăng nhập
-                CuaHang staffForm = new CuaHang(taikhoan);
-                staffForm.ShowDialog();
-                SQLcode.dongketnoi(); 
+                CuaHang adminForm = new CuaHang(taikhoan,2);
+                adminForm.ShowDialog();
+                SQLcode.dongketnoi(); // Đóng kết nối sau khi sử dụng
 
             }
-            this.Show();
+
+                this.Show();
             txt_username.Text = "";
             txt_password.Text = "";
             SQLcode.taoketnoi();

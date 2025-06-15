@@ -256,7 +256,6 @@ namespace DAI_LY_BAN_Xe
 
         public DataTable Laymaxemay()
         {
-            taoketnoi();
             DataTable dt = new DataTable();
             string query = "laymaxemay "; // tên procedure
 

@@ -18,9 +18,10 @@ namespace DAI_LY_BAN_Xe
         private readonly DataTable _topXe;
         private readonly DataTable _topNhap;
         private readonly DataTable _topKH;
+        private readonly DataTable _topNV;
         //  DataTable _data;
 
-        public frmInReport(DataTable detail, DataTable topXe, DataTable topNhap, DataTable topKH)
+        public frmInReport(DataTable detail, DataTable topXe, DataTable topNhap, DataTable topKH, DataTable topNV)
         {
             InitializeComponent();
             //  _data = data;
@@ -28,6 +29,7 @@ namespace DAI_LY_BAN_Xe
             _topXe = topXe;
             _topNhap = topNhap;
             _topKH = topKH;
+            _topNV = topNV;
         }
 
         private void frmInReport_Load(object sender, EventArgs e)
@@ -49,6 +51,8 @@ namespace DAI_LY_BAN_Xe
 
         var rds4 = new ReportDataSource("DataSetKHChiNhieu", _topKH);
         reportViewer1.LocalReport.DataSources.Add(rds4);
+        var rds5 = new ReportDataSource("DataSet4", _topNV);
+        reportViewer1.LocalReport.DataSources.Add(rds5);
 
             reportViewer1.RefreshReport();
         }

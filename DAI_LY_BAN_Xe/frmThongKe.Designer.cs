@@ -34,8 +34,6 @@
             this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
             this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
             this.btnThucHien = new System.Windows.Forms.Button();
-            this.cboGiaTien = new System.Windows.Forms.ComboBox();
-            this.btnLoc = new System.Windows.Forms.Button();
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -108,34 +106,11 @@
             this.btnThucHien.UseVisualStyleBackColor = true;
             this.btnThucHien.Click += new System.EventHandler(this.btnThucHien_Click);
             // 
-            // cboGiaTien
-            // 
-            this.cboGiaTien.FormattingEnabled = true;
-            this.cboGiaTien.Items.AddRange(new object[] {
-            "< 15.000.000",
-            "[15.000.000 ; 50.000.000]",
-            ">50.000.000"});
-            this.cboGiaTien.Location = new System.Drawing.Point(488, 86);
-            this.cboGiaTien.Name = "cboGiaTien";
-            this.cboGiaTien.Size = new System.Drawing.Size(165, 24);
-            this.cboGiaTien.TabIndex = 7;
-            // 
-            // btnLoc
-            // 
-            this.btnLoc.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoc.Location = new System.Drawing.Point(367, 79);
-            this.btnLoc.Name = "btnLoc";
-            this.btnLoc.Size = new System.Drawing.Size(76, 37);
-            this.btnLoc.TabIndex = 8;
-            this.btnLoc.Text = "Lọc";
-            this.btnLoc.UseVisualStyleBackColor = true;
-            this.btnLoc.Click += new System.EventHandler(this.btnLoc_Click);
-            // 
             // btnQuayLai
             // 
             this.btnQuayLai.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuayLai.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnQuayLai.Location = new System.Drawing.Point(1241, 683);
+            this.btnQuayLai.Location = new System.Drawing.Point(378, 76);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(155, 38);
             this.btnQuayLai.TabIndex = 10;
@@ -146,7 +121,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dgvHoaDon);
-            this.panel1.Location = new System.Drawing.Point(1, 253);
+            this.panel1.Location = new System.Drawing.Point(1, 191);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1723, 369);
             this.panel1.TabIndex = 11;
@@ -155,7 +130,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 215);
+            this.label3.Location = new System.Drawing.Point(12, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(185, 25);
             this.label3.TabIndex = 12;
@@ -177,13 +152,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1656, 756);
+            this.ClientSize = new System.Drawing.Size(1656, 653);
             this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnQuayLai);
-            this.Controls.Add(this.btnLoc);
-            this.Controls.Add(this.cboGiaTien);
             this.Controls.Add(this.btnThucHien);
             this.Controls.Add(this.dtpDenNgay);
             this.Controls.Add(this.dtpTuNgay);
@@ -209,8 +182,6 @@
         private System.Windows.Forms.DateTimePicker dtpTuNgay;
         private System.Windows.Forms.DateTimePicker dtpDenNgay;
         private System.Windows.Forms.Button btnThucHien;
-        private System.Windows.Forms.ComboBox cboGiaTien;
-        private System.Windows.Forms.Button btnLoc;
         private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;

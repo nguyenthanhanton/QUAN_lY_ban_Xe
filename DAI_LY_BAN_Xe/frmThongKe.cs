@@ -73,57 +73,6 @@ namespace DAI_LY_BAN_Xe
             }
         }
 
-        private void btnLoc_Click(object sender, EventArgs e)
-        {
-            int giaTu = 0;
-            int giaDen = int.MaxValue;
-
-            switch (cboGiaTien.SelectedItem.ToString())
-            {
-                case "< 15000000":
-                    giaTu = 0;
-                    giaDen = 14999999;
-                    break;
-                case "[15000000 ; 50000000]":
-                    giaTu = 15000000;
-                    giaDen = 50000000;
-                    break;
-                case "> 50000000":
-                    giaTu = 50000001;
-                    giaDen = int.MaxValue;
-                    break;
-            }
-
-            SQLcode a = new SQLcode();
-            a.taoketnoi();
-
-            try
-            {
-                SqlCommand cmd = new SqlCommand("dbo.sp_ThongKeTongQuat", a.conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.AddWithValue("@TuNgay", dtpTuNgay.Value.Date);
-                cmd.Parameters.AddWithValue("@DenNgay", dtpDenNgay.Value.Date);
-                cmd.Parameters.AddWithValue("@GiaTu", giaTu);
-                cmd.Parameters.AddWithValue("@GiaDen", giaDen);
-
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                load(dgvHoaDon, dt);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
-            finally
-            {
-                a.dongketnoi();
-            }
-        }
-
-        
         private void btnXuat_Click(object sender, EventArgs e)
         {
             DataTable dt = ((DataTable)dgvHoaDon.DataSource);
@@ -144,15 +93,20 @@ namespace DAI_LY_BAN_Xe
                 DataTable dtTopNhap = new DataTable();
                 daTopNhap.Fill(dtTopNhap);
 
-                SqlDataAdapter daTopKH = new SqlDataAdapter("sp_KhachHangChiNhieuNhat", sql.conn);
-                daTopNhap.SelectCommand.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter daTopKH = new SqlDataAdapter("sp_KhachHangChiNhieuNhat1", sql.conn);
+                daTopKH.SelectCommand.CommandType = CommandType.StoredProcedure;
                 DataTable dtTopKH = new DataTable();
                 daTopKH.Fill(dtTopKH);
+
+                SqlDataAdapter daTopNV = new SqlDataAdapter("sp_ThongKe_DoanhThu_TheoNhanVien", sql.conn);
+                daTopNV.SelectCommand.CommandType = CommandType.StoredProcedure;
+                DataTable dtTopNV = new DataTable();
+                daTopNV.Fill(dtTopNV);
 
                 sql.dongketnoi();
 
                 // Truyền cả hai bảng vào form InReport
-                frmInReport frm = new frmInReport(dt, dtTopXe,dtTopNhap,dtTopKH );
+                frmInReport frm = new frmInReport(dt, dtTopXe,dtTopNhap,dtTopKH,dtTopNV);
                 frm.ShowDialog();
             }
             else

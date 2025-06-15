@@ -25,14 +25,46 @@ namespace DAI_LY_BAN_Xe
             InitializeComponent();
         }
 
-        public CuaHang(string a)
+        public CuaHang(string a,int b)
         {
             InitializeComponent();
             SQLcode.taoketnoi();
             manv = SQLcode.laymanhanvientutaikhoan(a);
             lammoithongtinbanxe();
             this.Size = new Size(1742, 930);
+            ktquyenhan(b);
             
+        }
+        public static string LayQuyenHan(string tenTK)
+        {
+            string quyenHan = "";
+            string connStr = "server=ADMIN\\SQLEXPRESS06; uid=hieutranminh;pwd=tranminhhieu;database=QUANLY_CUAHANG_BANXEMAY";
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+
+                string query = "SELECT QUYENHAN FROM TAIKHOAN WHERE TAIKHOAN = @taikhoan";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@taikhoan", tenTK);
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                        quyenHan = result.ToString();
+                }
+
+                conn.Close();
+            }
+
+            return quyenHan;
+        }
+        private void ktquyenhan(int b)
+        {
+            if (b == 2)
+            {
+                thốngKêToolStripMenuItem.Visible = false;
+            }
         }
 
         int tongtien = 0;
@@ -812,6 +844,7 @@ namespace DAI_LY_BAN_Xe
                 txt_xuatxu.ReadOnly = true;
                 cb_tinhtrang.Enabled = false;
                 txt_nxx.ReadOnly = true;
+                txt_hangxecuaxe.ReadOnly = true;
                 nmb_slnhap.Value = 0;
                 tongtien = 0;
                 txt_tongtiennhap.Text = tongtien.ToString();
@@ -867,12 +900,14 @@ namespace DAI_LY_BAN_Xe
                 txt_xuatxu.ReadOnly = false;
                 cb_tinhtrang.Enabled = true;
                 txt_nxx.ReadOnly = false;
+                txt_hangxecuaxe.ReadOnly = false;
                 txt_tenxe.Text = "";
                 txt_hangxe.Text = "";
                 txt_nxx.Text = "";
                 cb_tinhtrang.Text = "";
                 txt_nxx.Text = "";
                 txt_xuatxu.Text= "";
+                txt_hangxecuaxe.Text = "";
                 p_nhap.Image = null;
             }
             }
@@ -892,8 +927,7 @@ namespace DAI_LY_BAN_Xe
 
                     cb_tinhtrang.Text = row.Cells["Tình trạng"].Value.ToString();
                     txt_xuatxu.Text = row.Cells["Nguồn gốc"].Value.ToString();
-                    
-
+                    txt_hangxecuaxe.Text = row.Cells["Hãng sản xuất"].Value.ToString();
                     // Nếu ảnh là byte[] thì convert sang Image
                     if (row.Cells["ANH"].Value != DBNull.Value)
                     {
@@ -923,6 +957,7 @@ namespace DAI_LY_BAN_Xe
                 txt_nxx.Text = row["NAMSX"].ToString();
                 cb_tinhtrang.Text = row["TINHTRANG"].ToString();
                 txt_xuatxu.Text = row["NGUONGOC"].ToString();
+                txt_hangxecuaxe.Text = row["HANGSX"].ToString();
                 if (row["ANH"] != DBNull.Value)
                 {
                     byte[] imgBytes = (byte[])row["ANH"];
@@ -1034,6 +1069,7 @@ namespace DAI_LY_BAN_Xe
                 {
                     maxenhaplai[chiso] = comboBox_maxenhaplai.Text.Trim();
                 }
+                nhaphang[chiso, 0] = txt_hangxecuaxe.Text.Trim();
                 nhaphang[chiso, 1] = txt_tenxe.Text;
                 nhaphang[chiso, 2] = txt_xuatxu.Text;
                 nhaphang[chiso, 3] = cb_tinhtrang.Text;
@@ -1070,8 +1106,11 @@ namespace DAI_LY_BAN_Xe
         {
             if (chisotrolai == chiso && chiso > 0)
             {
+                
                 chiso--;  // Giảm số lượng đơn
                 chisotrolai = chiso;
+                tongtien = tongtien - (int.Parse(nhaphang[chiso, 5]) * (int)soluongnhap[chiso]);
+                txt_tongtiennhap.Text = tongtien.ToString();
 
                 MessageBox.Show("Xóa đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearInputs();
@@ -1092,7 +1131,7 @@ namespace DAI_LY_BAN_Xe
         {
             if (index >= 0 && index < chiso)
             {
-
+                txt_hangxecuaxe.Text= nhaphang[index, 0];
                 txt_tenxe.Text = nhaphang[index, 1];
                 txt_xuatxu.Text = nhaphang[index, 2];
                 cb_tinhtrang.Text = nhaphang[index, 3];
@@ -1114,6 +1153,7 @@ namespace DAI_LY_BAN_Xe
             txt_dongia.Text = "";
             nmb_slnhap.Value = 0;
             p_nhap.Image = null;
+            txt_hangxecuaxe.Text = "";
         }
         private void btn_nhapxe_Click(object sender, EventArgs e)
         {
@@ -1122,6 +1162,10 @@ namespace DAI_LY_BAN_Xe
                 MessageBox.Show("Số lượng nhập không được bằng 0", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            DialogResult result = MessageBox.Show("Bạn có muốn nhập hàng hành không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                nhaphang[chiso, 0] = txt_hangxecuaxe.Text.Trim();
             nhaphang[chiso, 1] = txt_tenxe.Text;
             nhaphang[chiso, 2] = txt_xuatxu.Text;
             nhaphang[chiso, 3] = cb_tinhtrang.Text;
@@ -1147,7 +1191,7 @@ namespace DAI_LY_BAN_Xe
             }
             for (int i = 0; i <= chiso; i++)
             {
-                for (int j = 1; j <= 5; j++)
+                for (int j = 0; j <= 5; j++)
                 {
                     if (nhaphang[i, j] == "")
                     {
@@ -1157,9 +1201,7 @@ namespace DAI_LY_BAN_Xe
                 }
 
             }
-            DialogResult result = MessageBox.Show("Bạn có muốn nhập hàng hành không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
+           
                 if (checkBox_nhaplai.Checked) {
                     string mahoadon = SQLcode.laymahoadonlonnhat();
                     mahoadon = TangMaTuDong(mahoadon);
@@ -1196,9 +1238,10 @@ namespace DAI_LY_BAN_Xe
                         string namsx = nhaphang[i, 4];
                         string tinhtrang = nhaphang[i, 3];
                         string nguongoc = nhaphang[i, 2];
+                        string hangxe = nhaphang[i, 0];
                         byte[] hinhanh = b[i];
                         decimal sl = soluongnhap[i];
-                        SQLcode.taoxemay(maxe, tenxe, txt_hangxe.Text.Trim(), namsx, tinhtrang, nguongoc, hinhanh, (int)sl);
+                        SQLcode.taoxemay(maxe, tenxe, hangxe, namsx, tinhtrang, nguongoc, hinhanh, (int)sl);
 
                         int dongianhap = int.Parse(nhaphang[i, 5]);
                         MessageBox.Show(mahoadon + " " + maxe + " " + dongianhap + " " + sl);
@@ -1460,7 +1503,10 @@ namespace DAI_LY_BAN_Xe
             }
             else
             {
-                cthoadonbanhang[chisoban, 0] = comboBox_maxeban.Text;
+                DialogResult result = MessageBox.Show("Bạn có muốn nhập bán không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    cthoadonbanhang[chisoban, 0] = comboBox_maxeban.Text;
                 cthoadonbanhang[chisoban, 1] = nud_slban.Value.ToString();
                 cthoadonbanhang[chisoban, 2] = txt_giaxeban.Text;
 
@@ -1491,9 +1537,7 @@ namespace DAI_LY_BAN_Xe
                 txt_tongtienban.Text = tongtienban.ToString();
                 int tongtiensaukhigiamgia = tongtienban / 100 * (100 - phantramgiamgia);
                 MessageBox.Show("Tổng tiền bán là " + txt_tongtienban.Text + " Tổng tiền sau khi giảm giá là" + tongtiensaukhigiamgia);
-                DialogResult result = MessageBox.Show("Bạn có muốn nhập bán không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
+               
 
                     string mahoadonban = SQLcode.laymahoadonbanlonnhat();
                     mahoadonban = TangMaTuDong(mahoadonban);
@@ -1550,22 +1594,10 @@ namespace DAI_LY_BAN_Xe
             pictureb_xemay.Image = null;
             DataTable dt = SQLcode.layxemay();
             load(data_xemay, dt);
-            SQLcode.laytencacnhacungcap(lb_hangsxxemay);
+           
         }
 
-        private void lb_hangsxxemay_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (lb_hangsxxemay.SelectedItem != null)
-            {
-                // Dùng nó an toàn nè
-                txt_hangxemay.Text = lb_hangsxxemay.SelectedItem.ToString();
-                // hoặc ép kiểu nếu dùng DataRowView hay object phức tạp
-            }
-            else
-            {
-                // Có thể bỏ trống, hoặc thông báo, hoặc return sớm
-            }
-        }
+      
 
         private void data_xemay_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -1677,7 +1709,7 @@ namespace DAI_LY_BAN_Xe
                     MessageBox.Show("Sữa xe thành công", "Thông báo", MessageBoxButtons.OK);
                     DataTable dt = SQLcode.layxemay();
                    load(data_xemay, dt);
-                    SQLcode.laytencacnhacungcap(lb_hangsxxemay);
+                    
                     lammoithongtinbanxe();
                 }
             }
@@ -1942,38 +1974,6 @@ namespace DAI_LY_BAN_Xe
             comboBox_maxeban_SelectedIndexChanged(this, EventArgs.Empty);
         }
 
-        private void doanhSốToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmThongKe a = new frmThongKe();
-            a.ShowDialog();
-            
-        }
-
-        public static string LayQuyenHan(string tenTK)
-        {
-            string quyenHan = "";
-            string connStr = "server=DESKTOP-392TCLG\\SQLEXPRESS01; uid=banxe;pwd=1;database=QUANLY_CUAHANG_BANXEMAY";
-
-            using (SqlConnection conn = new SqlConnection(connStr))
-            {
-                conn.Open();
-
-                string query = "SELECT QUYENHAN FROM TAIKHOAN WHERE TAIKHOAN = @taikhoan";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@taikhoan", tenTK);
-                    object result = cmd.ExecuteScalar();
-                    if (result != null)
-                        quyenHan = result.ToString();
-                }
-
-                conn.Close();
-            }
-
-            return quyenHan;
-        }
-
         private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string tenTK = layTenTk.TAIKHOAN;
@@ -2003,6 +2003,14 @@ namespace DAI_LY_BAN_Xe
                 MessageBox.Show("Không xác định được quyền hạn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void doanhSốToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThongKe a = new frmThongKe();
+            a.ShowDialog();
+        }
+
+
 
 
 

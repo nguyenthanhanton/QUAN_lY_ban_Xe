@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frmthongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:frmthongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\6\\quan_ly_ban_xe\\dai_ly_ban_xe\\frmthongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:frmthongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frminreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:frminreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\6\\quan_ly_ban_xe\\dai_ly_ban_xe\\cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\6\\quan_ly_ban_xe\\dai_ly_ban_xe\\cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:cuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\6\\quan_ly_ban_xe\\dai_ly_ban_xe\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\6\\quan_ly_ban_xe\\dai_ly_ban_xe\\sqlcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:sqlcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\6\\quan_ly_ban_xe\\dai_ly_ban_xe\\doimk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,34 +23,6 @@
       "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:doimk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\6\\quan_ly_ban_xe\\dai_ly_ban_xe\\formthemtk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:formthemtk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\6\\quan_ly_ban_xe\\dai_ly_ban_xe\\formthemtk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:formthemtk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\6\\quan_ly_ban_xe\\dai_ly_ban_xe\\formnv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:formnv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\6\\quan_ly_ban_xe\\dai_ly_ban_xe\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\6\\quan_ly_ban_xe\\dai_ly_ban_xe\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\6\\quan_ly_ban_xe\\dai_ly_ban_xe\\formnv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:formnv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\sqlcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:sqlcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\6\\quan_ly_ban_xe\\dai_ly_ban_xe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -71,24 +31,24 @@
       "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\6\\quan_ly_ban_xe\\dai_ly_ban_xe\\frminreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frminreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:frminreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frminreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:frminreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\6\\quan_ly_ban_xe\\dai_ly_ban_xe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frmthongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:frmthongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\6\\quan_ly_ban_xe\\dai_ly_ban_xe\\laytentk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:laytentk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|f:\\6\\quan_ly_ban_xe\\dai_ly_ban_xe\\report1.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\report1.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
       "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:report1.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\thongkedataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
-      "RelativeMoniker": "D:0:0:{40E1045B-174F-4C80-82D8-06E5241475EA}|DAI_LY_BAN_Xe.csproj|solutionrelative:thongkedataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -98,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 23,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,278 +74,151 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "App.config",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\App.config",
-              "RelativeDocumentMoniker": "App.config",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\App.config",
-              "RelativeToolTip": "App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-06-13T15:32:17.824Z",
+              "DocumentIndex": 2,
+              "Title": "SQLcode.cs",
+              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\SQLcode.cs",
+              "RelativeDocumentMoniker": "SQLcode.cs",
+              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\SQLcode.cs",
+              "RelativeToolTip": "SQLcode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T12:37:40.054Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAkwDwAAAAxAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "DoiMK.cs",
+              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\DoiMK.cs",
+              "RelativeDocumentMoniker": "DoiMK.cs",
+              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\DoiMK.cs",
+              "RelativeToolTip": "DoiMK.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAwDkAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T15:18:48.977Z",
+              "WhenOpened": "2025-06-15T12:37:32.382Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T15:18:47.69Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FormThemTK.cs",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\FormThemTK.cs",
-              "RelativeDocumentMoniker": "FormThemTK.cs",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\FormThemTK.cs",
-              "RelativeToolTip": "FormThemTK.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAADwvxYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T15:13:19.992Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FormThemTK.cs [Design]",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\FormThemTK.cs",
-              "RelativeDocumentMoniker": "FormThemTK.cs",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\FormThemTK.cs [Design]",
-              "RelativeToolTip": "FormThemTK.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T15:13:06.087Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmThongKe.cs [Design]",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frmThongKe.cs",
-              "RelativeDocumentMoniker": "frmThongKe.cs",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frmThongKe.cs [Design]*",
-              "RelativeToolTip": "frmThongKe.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T15:13:03.996Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T15:09:01.912Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "layTenTk.cs",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\layTenTk.cs",
-              "RelativeDocumentMoniker": "layTenTk.cs",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\layTenTk.cs",
-              "RelativeToolTip": "layTenTk.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T15:01:44.784Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "frmInReport.cs [Design]",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frmInReport.cs",
-              "RelativeDocumentMoniker": "frmInReport.cs",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frmInReport.cs [Design]",
-              "RelativeToolTip": "frmInReport.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T15:01:41.255Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FormNV.cs [Design]",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\FormNV.cs",
-              "RelativeDocumentMoniker": "FormNV.cs",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\FormNV.cs [Design]",
-              "RelativeToolTip": "FormNV.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T15:01:40.161Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "DoiMK.cs [Design]",
               "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\DoiMK.cs",
               "RelativeDocumentMoniker": "DoiMK.cs",
               "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\DoiMK.cs [Design]",
               "RelativeToolTip": "DoiMK.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T15:01:38.836Z",
+              "WhenOpened": "2025-06-15T12:37:31.09Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DoiMK.cs",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\DoiMK.cs",
-              "RelativeDocumentMoniker": "DoiMK.cs",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\DoiMK.cs",
-              "RelativeToolTip": "DoiMK.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAqwDUAAABBAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CuaHang.cs",
+              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
+              "RelativeDocumentMoniker": "CuaHang.cs",
+              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
+              "RelativeToolTip": "CuaHang.cs",
+              "ViewState": "AgIAAMcHAAAAAAAAAAAAwNkHAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T15:01:34.759Z",
+              "WhenOpened": "2025-06-15T12:36:45.027Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FormAdmin.cs [Design]",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\FormAdmin.cs",
-              "RelativeDocumentMoniker": "FormAdmin.cs",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\FormAdmin.cs [Design]",
-              "RelativeToolTip": "FormAdmin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T15:01:31.506Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "FormNV.cs",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\FormNV.cs",
-              "RelativeDocumentMoniker": "FormNV.cs",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\FormNV.cs",
-              "RelativeToolTip": "FormNV.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAqwEUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T15:01:28.276Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FormAdmin.cs",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\FormAdmin.cs",
-              "RelativeDocumentMoniker": "FormAdmin.cs",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\FormAdmin.cs",
-              "RelativeToolTip": "FormAdmin.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAqwGQAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T15:01:25.94Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "SQLcode.cs",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\SQLcode.cs",
-              "RelativeDocumentMoniker": "SQLcode.cs",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\SQLcode.cs",
-              "RelativeToolTip": "SQLcode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T14:48:13.013Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "CuaHang.cs [Design]",
               "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
               "RelativeDocumentMoniker": "CuaHang.cs",
               "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs [Design]",
               "RelativeToolTip": "CuaHang.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T14:47:57.436Z",
+              "WhenOpened": "2025-06-15T12:36:42.51Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CuaHang.cs",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
-              "RelativeDocumentMoniker": "CuaHang.cs",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\CuaHang.cs",
-              "RelativeToolTip": "CuaHang.cs",
-              "ViewState": "AgIAAIsHAAAAAAAAAADwv5wHAAAMAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAwCoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T14:47:50.779Z",
+              "WhenOpened": "2025-06-15T12:36:24.444Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ThongKeDataSet.xsd",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\ThongKeDataSet.xsd",
-              "RelativeDocumentMoniker": "ThongKeDataSet.xsd",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\ThongKeDataSet.xsd",
-              "RelativeToolTip": "ThongKeDataSet.xsd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
-              "WhenOpened": "2025-06-13T02:47:33.753Z"
+              "DocumentIndex": 6,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T12:36:21.651Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 7,
+              "Title": "frmInReport.cs",
+              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frmInReport.cs",
+              "RelativeDocumentMoniker": "frmInReport.cs",
+              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frmInReport.cs",
+              "RelativeToolTip": "frmInReport.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAIA0wBEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T15:57:57.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmInReport.cs [Design]",
+              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frmInReport.cs",
+              "RelativeDocumentMoniker": "frmInReport.cs",
+              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frmInReport.cs [Design]",
+              "RelativeToolTip": "frmInReport.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T15:57:54.887Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T15:52:06.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Report1.rdlc [Design]",
               "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Report1.rdlc",
               "RelativeDocumentMoniker": "Report1.rdlc",
               "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\Report1.rdlc [Design]",
               "RelativeToolTip": "Report1.rdlc [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
-              "WhenOpened": "2025-06-13T01:29:03.734Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-13T01:29:03.734Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "frmThongKe.cs",
               "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frmThongKe.cs",
               "RelativeDocumentMoniker": "frmThongKe.cs",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frmThongKe.cs*",
-              "RelativeToolTip": "frmThongKe.cs*",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAqwKUAAAAZAAAAAAAAAA==",
+              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frmThongKe.cs",
+              "RelativeToolTip": "frmThongKe.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAA0wHsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T00:46:33.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmInReport.cs",
-              "DocumentMoniker": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frmInReport.cs",
-              "RelativeDocumentMoniker": "frmInReport.cs",
-              "ToolTip": "F:\\6\\QUAN_lY_ban_Xe\\DAI_LY_BAN_Xe\\frmInReport.cs",
-              "RelativeToolTip": "frmInReport.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAmwDgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T03:18:22.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-13T00:46:33.961Z"
             }
           ]
         }

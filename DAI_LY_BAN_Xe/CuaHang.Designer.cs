@@ -73,6 +73,7 @@
             this.l_daban8 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.l_sell8 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.l_sl8 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.l_name8 = new System.Windows.Forms.Label();
@@ -82,6 +83,7 @@
             this.l_daban4 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.l_sell4 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.l_sl4 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.l_name4 = new System.Windows.Forms.Label();
@@ -91,6 +93,7 @@
             this.l_daban7 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.l_sell7 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.l_sl7 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.l_name7 = new System.Windows.Forms.Label();
@@ -100,6 +103,7 @@
             this.l_daban3 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.l_sell3 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.l_sl3 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.l_name3 = new System.Windows.Forms.Label();
@@ -109,6 +113,7 @@
             this.l_daban6 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.l_sell6 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.l_sl6 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.l_name6 = new System.Windows.Forms.Label();
@@ -120,6 +125,7 @@
             this.l_sl2 = new System.Windows.Forms.Label();
             this.l_name2 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -129,6 +135,7 @@
             this.l_sl5 = new System.Windows.Forms.Label();
             this.l_name5 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
@@ -138,12 +145,15 @@
             this.l_sl1 = new System.Windows.Forms.Label();
             this.l_name1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.Page_nhaphang = new System.Windows.Forms.TabPage();
             this.datag_xemxemay = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label79 = new System.Windows.Forms.Label();
+            this.txt_hangxecuaxe = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
             this.comboBox_maxenhaplai = new System.Windows.Forms.ComboBox();
             this.checkBox_nhaplai = new System.Windows.Forms.CheckBox();
@@ -153,6 +163,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btn_lammoixe = new System.Windows.Forms.Button();
+            this.p_nhap = new System.Windows.Forms.PictureBox();
             this.label57 = new System.Windows.Forms.Label();
             this.txt_tongtiennhap = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
@@ -236,15 +247,15 @@
             this.page_xemay = new System.Windows.Forms.TabPage();
             this.data_xemay = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.label80 = new System.Windows.Forms.Label();
             this.comb_tinhtrangxemay = new System.Windows.Forms.ComboBox();
             this.txt_nguongocxemay = new System.Windows.Forms.TextBox();
             this.txt_namsxxemay = new System.Windows.Forms.TextBox();
             this.label76 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.label78 = new System.Windows.Forms.Label();
+            this.pictureb_xemay = new System.Windows.Forms.PictureBox();
             this.txt_hangxemay = new System.Windows.Forms.TextBox();
-            this.lb_hangsxxemay = new System.Windows.Forms.ListBox();
-            this.label75 = new System.Windows.Forms.Label();
             this.comboBox_xemay = new System.Windows.Forms.ComboBox();
             this.txt_lammoixemay = new System.Windows.Forms.Button();
             this.txt_giabanxemay = new System.Windows.Forms.TextBox();
@@ -263,16 +274,6 @@
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doanhSốToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.p_nhap = new System.Windows.Forms.PictureBox();
-            this.pictureb_xemay = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.page_ban_xe.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -280,16 +281,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.nud_slban)).BeginInit();
             this.panel1.SuspendLayout();
             this.p8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.p4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.p7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.p3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.p6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.p2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.p5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.p1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Page_nhaphang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datag_xemxemay)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.p_nhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmb_slnhap)).BeginInit();
             this.page_BH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datag_baohanh)).BeginInit();
@@ -307,17 +317,8 @@
             this.page_xemay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_xemay)).BeginInit();
             this.panel9.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p_nhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureb_xemay)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -850,6 +851,18 @@
             this.l_sell8.TabIndex = 32;
             this.l_sell8.Text = "Null";
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox8.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(195, 188);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 1;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            // 
             // l_sl8
             // 
             this.l_sl8.AutoEllipsis = true;
@@ -955,6 +968,18 @@
             this.l_sell4.Size = new System.Drawing.Size(100, 18);
             this.l_sell4.TabIndex = 28;
             this.l_sell4.Text = "Null";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(195, 188);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // l_sl4
             // 
@@ -1063,6 +1088,18 @@
             this.l_sell7.TabIndex = 28;
             this.l_sell7.Text = "Null";
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox7.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(195, 188);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 1;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
             // l_sl7
             // 
             this.l_sl7.AutoEllipsis = true;
@@ -1169,6 +1206,18 @@
             this.l_sell3.TabIndex = 24;
             this.l_sell3.Text = "Null";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(195, 188);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // l_sl3
             // 
             this.l_sl3.AutoEllipsis = true;
@@ -1274,6 +1323,18 @@
             this.l_sell6.Size = new System.Drawing.Size(100, 18);
             this.l_sell6.TabIndex = 24;
             this.l_sell6.Text = "Null";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox6.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(195, 188);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 1;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // l_sl6
             // 
@@ -1403,6 +1464,18 @@
             this.label16.TabIndex = 13;
             this.label16.Text = "Mã xe";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(195, 188);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -1508,6 +1581,18 @@
             this.label40.Size = new System.Drawing.Size(48, 19);
             this.label40.TabIndex = 13;
             this.label40.Text = "Mã xe";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(195, 188);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // label41
             // 
@@ -1615,6 +1700,18 @@
             this.label15.TabIndex = 13;
             this.label15.Text = "Mã xe";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(195, 188);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -1679,6 +1776,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel4.Controls.Add(this.label79);
+            this.panel4.Controls.Add(this.txt_hangxecuaxe);
             this.panel4.Controls.Add(this.label45);
             this.panel4.Controls.Add(this.comboBox_maxenhaplai);
             this.panel4.Controls.Add(this.checkBox_nhaplai);
@@ -1710,8 +1809,28 @@
             this.panel4.Location = new System.Drawing.Point(3, 2);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1690, 382);
+            this.panel4.Size = new System.Drawing.Size(1688, 382);
             this.panel4.TabIndex = 0;
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label79.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.Location = new System.Drawing.Point(303, 325);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(79, 25);
+            this.label79.TabIndex = 66;
+            this.label79.Text = "Hãng xe";
+            // 
+            // txt_hangxecuaxe
+            // 
+            this.txt_hangxecuaxe.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_hangxecuaxe.Location = new System.Drawing.Point(441, 322);
+            this.txt_hangxecuaxe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_hangxecuaxe.Name = "txt_hangxecuaxe";
+            this.txt_hangxecuaxe.Size = new System.Drawing.Size(177, 31);
+            this.txt_hangxecuaxe.TabIndex = 65;
             // 
             // label45
             // 
@@ -1749,7 +1868,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(1517, 153);
+            this.button4.Location = new System.Drawing.Point(1517, 123);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(121, 50);
@@ -1807,7 +1926,7 @@
             // btn_lammoixe
             // 
             this.btn_lammoixe.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_lammoixe.Location = new System.Drawing.Point(315, 316);
+            this.btn_lammoixe.Location = new System.Drawing.Point(1517, 224);
             this.btn_lammoixe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_lammoixe.Name = "btn_lammoixe";
             this.btn_lammoixe.Size = new System.Drawing.Size(121, 50);
@@ -1816,12 +1935,24 @@
             this.btn_lammoixe.UseVisualStyleBackColor = true;
             this.btn_lammoixe.Click += new System.EventHandler(this.btn_lammoixe_Click);
             // 
+            // p_nhap
+            // 
+            this.p_nhap.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.p_nhap.Location = new System.Drawing.Point(1136, 89);
+            this.p_nhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.p_nhap.Name = "p_nhap";
+            this.p_nhap.Size = new System.Drawing.Size(195, 189);
+            this.p_nhap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.p_nhap.TabIndex = 47;
+            this.p_nhap.TabStop = false;
+            this.p_nhap.Click += new System.EventHandler(this.p_nhap_Click);
+            // 
             // label57
             // 
             this.label57.AutoSize = true;
             this.label57.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label57.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.Location = new System.Drawing.Point(589, 316);
+            this.label57.Location = new System.Drawing.Point(742, 318);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(145, 25);
             this.label57.TabIndex = 46;
@@ -1830,7 +1961,7 @@
             // txt_tongtiennhap
             // 
             this.txt_tongtiennhap.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tongtiennhap.Location = new System.Drawing.Point(747, 313);
+            this.txt_tongtiennhap.Location = new System.Drawing.Point(900, 315);
             this.txt_tongtiennhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_tongtiennhap.Name = "txt_tongtiennhap";
             this.txt_tongtiennhap.ReadOnly = true;
@@ -1960,11 +2091,11 @@
             this.label51.AutoSize = true;
             this.label51.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label51.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(96, 26);
+            this.label51.Location = new System.Drawing.Point(53, 26);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(79, 25);
+            this.label51.Size = new System.Drawing.Size(126, 25);
             this.label51.TabIndex = 27;
-            this.label51.Text = "Hãng xe";
+            this.label51.Text = "Nhà cung cấp";
             // 
             // label52
             // 
@@ -2778,6 +2909,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel9.Controls.Add(this.label80);
             this.panel9.Controls.Add(this.comb_tinhtrangxemay);
             this.panel9.Controls.Add(this.txt_nguongocxemay);
             this.panel9.Controls.Add(this.txt_namsxxemay);
@@ -2786,8 +2918,6 @@
             this.panel9.Controls.Add(this.label78);
             this.panel9.Controls.Add(this.pictureb_xemay);
             this.panel9.Controls.Add(this.txt_hangxemay);
-            this.panel9.Controls.Add(this.lb_hangsxxemay);
-            this.panel9.Controls.Add(this.label75);
             this.panel9.Controls.Add(this.comboBox_xemay);
             this.panel9.Controls.Add(this.txt_lammoixemay);
             this.panel9.Controls.Add(this.txt_giabanxemay);
@@ -2804,6 +2934,17 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1709, 364);
             this.panel9.TabIndex = 6;
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label80.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.Location = new System.Drawing.Point(755, 308);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(79, 25);
+            this.label80.TabIndex = 74;
+            this.label80.Text = "Hãng xe";
             // 
             // comb_tinhtrangxemay
             // 
@@ -2869,40 +3010,26 @@
             this.label78.TabIndex = 68;
             this.label78.Text = "Năm sản xuất";
             // 
+            // pictureb_xemay
+            // 
+            this.pictureb_xemay.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureb_xemay.Location = new System.Drawing.Point(1181, 34);
+            this.pictureb_xemay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureb_xemay.Name = "pictureb_xemay";
+            this.pictureb_xemay.Size = new System.Drawing.Size(195, 189);
+            this.pictureb_xemay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureb_xemay.TabIndex = 67;
+            this.pictureb_xemay.TabStop = false;
+            this.pictureb_xemay.Click += new System.EventHandler(this.pictureb_xemay_Click);
+            // 
             // txt_hangxemay
             // 
             this.txt_hangxemay.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txt_hangxemay.Location = new System.Drawing.Point(47, 311);
+            this.txt_hangxemay.Location = new System.Drawing.Point(893, 308);
             this.txt_hangxemay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_hangxemay.Name = "txt_hangxemay";
-            this.txt_hangxemay.ReadOnly = true;
             this.txt_hangxemay.Size = new System.Drawing.Size(177, 31);
             this.txt_hangxemay.TabIndex = 64;
-            // 
-            // lb_hangsxxemay
-            // 
-            this.lb_hangsxxemay.BackColor = System.Drawing.Color.Aquamarine;
-            this.lb_hangsxxemay.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold);
-            this.lb_hangsxxemay.FormattingEnabled = true;
-            this.lb_hangsxxemay.ItemHeight = 25;
-            this.lb_hangsxxemay.Location = new System.Drawing.Point(15, 41);
-            this.lb_hangsxxemay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lb_hangsxxemay.Name = "lb_hangsxxemay";
-            this.lb_hangsxxemay.ScrollAlwaysVisible = true;
-            this.lb_hangsxxemay.Size = new System.Drawing.Size(265, 254);
-            this.lb_hangsxxemay.TabIndex = 63;
-            this.lb_hangsxxemay.SelectedIndexChanged += new System.EventHandler(this.lb_hangsxxemay_SelectedIndexChanged);
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label75.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.Location = new System.Drawing.Point(96, 2);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(79, 25);
-            this.label75.TabIndex = 62;
-            this.label75.Text = "Hãng xe";
             // 
             // comboBox_xemay
             // 
@@ -3056,7 +3183,7 @@
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
@@ -3065,7 +3192,7 @@
             this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.doanhSốToolStripMenuItem});
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(84, 26);
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
             // doanhSốToolStripMenuItem
@@ -3074,126 +3201,6 @@
             this.doanhSốToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.doanhSốToolStripMenuItem.Text = "Doanh số";
             this.doanhSốToolStripMenuItem.Click += new System.EventHandler(this.doanhSốToolStripMenuItem_Click);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox8.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(195, 188);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 1;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(195, 188);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(195, 188);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 1;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(195, 188);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox6.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(195, 188);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(195, 188);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(195, 188);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(195, 188);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // p_nhap
-            // 
-            this.p_nhap.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.p_nhap.Location = new System.Drawing.Point(1136, 89);
-            this.p_nhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.p_nhap.Name = "p_nhap";
-            this.p_nhap.Size = new System.Drawing.Size(195, 189);
-            this.p_nhap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.p_nhap.TabIndex = 47;
-            this.p_nhap.TabStop = false;
-            this.p_nhap.Click += new System.EventHandler(this.p_nhap_Click);
-            // 
-            // pictureb_xemay
-            // 
-            this.pictureb_xemay.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureb_xemay.Location = new System.Drawing.Point(1181, 34);
-            this.pictureb_xemay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureb_xemay.Name = "pictureb_xemay";
-            this.pictureb_xemay.Size = new System.Drawing.Size(195, 189);
-            this.pictureb_xemay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureb_xemay.TabIndex = 67;
-            this.pictureb_xemay.TabStop = false;
-            this.pictureb_xemay.Click += new System.EventHandler(this.pictureb_xemay_Click);
             // 
             // CuaHang
             // 
@@ -3225,24 +3232,33 @@
             this.panel1.PerformLayout();
             this.p8.ResumeLayout(false);
             this.p8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.p4.ResumeLayout(false);
             this.p4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.p7.ResumeLayout(false);
             this.p7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.p3.ResumeLayout(false);
             this.p3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.p6.ResumeLayout(false);
             this.p6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.p2.ResumeLayout(false);
             this.p2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.p5.ResumeLayout(false);
             this.p5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.p1.ResumeLayout(false);
             this.p1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Page_nhaphang.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datag_xemxemay)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.p_nhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmb_slnhap)).EndInit();
             this.page_BH.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datag_baohanh)).EndInit();
@@ -3265,18 +3281,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.data_xemay)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureb_xemay)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p_nhap)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureb_xemay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3516,8 +3523,6 @@
         private System.Windows.Forms.ComboBox comboBox_xemay;
         private System.Windows.Forms.PictureBox pictureb_xemay;
         private System.Windows.Forms.TextBox txt_hangxemay;
-        private System.Windows.Forms.ListBox lb_hangsxxemay;
-        private System.Windows.Forms.Label label75;
         private System.Windows.Forms.ComboBox comb_tinhtrangxemay;
         private System.Windows.Forms.TextBox txt_nguongocxemay;
         private System.Windows.Forms.TextBox txt_namsxxemay;
@@ -3527,5 +3532,8 @@
         private System.Windows.Forms.CheckBox checkBox_nhaplai;
         private System.Windows.Forms.ComboBox comboBox_maxenhaplai;
         private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.TextBox txt_hangxecuaxe;
+        private System.Windows.Forms.Label label80;
     }
 }
